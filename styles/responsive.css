@@ -1,0 +1,215 @@
+/* ==========================================================================
+   ANTROMAT — ISSUE 01: RESPONSIVE & MOBILE SPECIFICATION
+   Desktop (1440+), Laptop (1280), Tablet (768), Mobile (390–480)
+   Specification: website new version.md Part 5
+   ========================================================================== */
+
+/* Laptop (1280px) */
+@media (max-width: 1280px) {
+  .editorial-nav {
+    padding: 0 32px;
+  }
+  .editorial-container {
+    padding: 0 32px;
+  }
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .workflow-display-stage {
+    gap: 24px;
+  }
+}
+
+/* Tablet (768px – 1024px) */
+@media (max-width: 1024px) {
+  .editorial-nav .nav-links {
+    display: none;
+  }
+  .nav-mobile-toggle {
+    display: block;
+  }
+  
+  .hero-cover-section {
+    padding-top: 120px;
+  }
+  
+  .dashboard-lower-split {
+    grid-template-columns: 1fr;
+  }
+  
+  .chaos-panels-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .memory-infographic-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .sales-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .production-tracker-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .workflow-display-stage {
+    grid-template-columns: 1fr;
+  }
+  
+  .icon-wall-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .outcomes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pricing-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .cta-spread-wrap {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Mobile (Under 768px, specifically 390px – 480px) */
+@media (max-width: 767px) {
+  :root {
+    --space-160: 100px;
+    --space-96: 64px;
+    --space-72: 48px;
+  }
+
+  .editorial-nav {
+    padding: 0 20px;
+    height: 64px;
+  }
+  
+  .nav-brand-issue {
+    display: none;
+  }
+
+  .editorial-container {
+    padding: 0 20px;
+  }
+
+  .sticky-page-indicator {
+    left: 16px;
+    bottom: 16px;
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .hero-headline {
+    font-size: 2.75rem;
+    line-height: 1.08;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-editorial-primary,
+  .hero-actions .btn-editorial-outline {
+    text-align: center;
+    width: 100%;
+  }
+
+  .dashboard-frame {
+    padding: 18px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-metric-card {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .sales-pipeline-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .production-tracker-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newspaper-columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .news-lead-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border-dark-subtle);
+    padding-right: 0;
+    padding-bottom: 24px;
+  }
+
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-wall-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .relationship-timeline {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .relationship-timeline::before {
+    display: none;
+  }
+
+  .invoice-document-sheet {
+    padding: 24px 18px;
+  }
+
+  .ask-antromat-console {
+    padding: 24px 18px;
+  }
+
+  .transcript-bubble-owner {
+    font-size: 1.25rem;
+  }
+
+  .cta-button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-button-group .btn-editorial-primary,
+  .cta-button-group .btn-editorial-outline {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

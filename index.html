@@ -3,1210 +3,1318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANTROMAT — Operations Manual × Live Product Demo</title>
-  <meta name="description" content="Antromat is the operating system for real businesses. Interactive operations manual and live product demo. Built in Vidarbha, Maharashtra.">
-  <link rel="stylesheet" href="styles/main.css">
+  <title>ANTROMAT — Issue 01: The AI Chief of Staff</title>
+  <meta name="description" content="Antromat is an AI Chief of Staff and business memory system for enterprise operations, sales, and finance. Issue 01 — September 2026.">
+  
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
 
-  <!-- Hanging Bookmark Ribbon -->
-  <div class="bookmark-ribbon" id="scroll-bookmark" title="Scroll Progress">
-    <span>PAGE 01</span>
-  </div>
+  <!-- Custom Minimal Editorial Dot Cursor -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 
-  <!-- Persistent Top-Right Live Impact Widget -->
-  <aside class="live-impact-floater" id="live-impact-widget" aria-label="Live Telemetry and Urgency Engine">
-    <div class="impact-header">
-      <span class="live-indicator">● LIVE IMPACT</span>
-      <div style="display:flex; align-items:center; gap:8px;">
-        <span style="color:var(--neutral-grey); font-size:9px;">ACTIVE</span>
-        <button class="minimize-toggle-btn" id="impact-minimize-btn" title="Toggle Size">_</button>
-      </div>
-    </div>
+  <!-- Top Hairline Reading Progress Bar -->
+  <div id="reading-progress" aria-hidden="true"></div>
 
-    <div class="impact-clock-row">
-      <div class="analog-clock" aria-label="Analog Clock">
-        <div class="clock-marker" style="transform: rotate(0deg);"></div>
-        <div class="clock-marker" style="transform: rotate(90deg);"></div>
-        <div class="clock-marker" style="transform: rotate(180deg);"></div>
-        <div class="clock-marker" style="transform: rotate(270deg);"></div>
-        <div class="clock-hand clock-hour"></div>
-        <div class="clock-hand clock-minute"></div>
-        <div class="clock-hand clock-second"></div>
-        <div class="clock-center"></div>
-      </div>
-      <div class="clock-digital-time">
-        <span class="time-val">14:28:36</span>
-        <span class="time-label">TIME RIGHT NOW</span>
-      </div>
-    </div>
-
-    <div class="impact-leak-box">
-      <div class="leak-value">₹ 18,426</div>
-      <div class="leak-title">REVENUE LEAKING TODAY</div>
-      <div class="leak-sub">...across unautomated operations.</div>
-    </div>
+  <!-- Sticky Editorial Page Counter (Bottom-Left) -->
+  <aside class="sticky-page-indicator" id="sticky-page-indicator" aria-label="Current Article">
+    <span class="page-num" id="indicator-num">00 / 13</span>
+    <span class="page-title" id="indicator-title">THE COVER</span>
   </aside>
 
-  <!-- Graphite Desk Viewport -->
-  <div class="desk-viewport">
-    
-    <!-- Physical Operations Manual Sheet -->
-    <main class="manual-binder" id="operations-manual">
+  <!-- Top Editorial Navigation -->
+  <header class="editorial-nav">
+    <a href="#article-cover" class="nav-brand">
+      <img src="logo.png" alt="Antromat Logo" class="nav-brand-logo">
+      <span class="nav-brand-title">ANTROMAT</span>
+      <span class="nav-brand-issue">ISSUE 01</span>
+    </a>
 
-      <!-- Technical Manual Header Bar -->
-      <header class="manual-header-bar">
-        <div class="brand-identity">
-          <img src="logo.png" alt="Antromat Logo" class="brand-logo-img">
-          <div class="brand-meta">
-            <span class="title">ANTROMAT</span>
-            <span class="subtitle">OPERATIONS MANUAL × LIVE DEMO</span>
-          </div>
-        </div>
+    <nav aria-label="Issue Navigation">
+      <ul class="nav-links">
+        <li><a href="#article-memory">Memory</a></li>
+        <li><a href="#article-sales">Sales</a></li>
+        <li><a href="#article-operations">Operations</a></li>
+        <li><a href="#article-finance">Finance</a></li>
+        <li><a href="#article-ask">Ask Antromat</a></li>
+        <li><a href="#article-workflows">Workflows</a></li>
+        <li><a href="#article-pricing">Pricing</a></li>
+      </ul>
+    </nav>
 
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#section-hero">01 HERO</a></li>
-            <li><a href="#section-whatsapp">02 WHATSAPP</a></li>
-            <li><a href="#section-n8n">03 ENGINE</a></li>
-            <li><a href="#section-lead-journey">05 PIPELINE</a></li>
-            <li><a href="#section-control-center">06 COCKPIT</a></li>
-            <li><a href="#section-industry">07 INDUSTRIES</a></li>
-            <li><a href="#section-library">08 LIBRARY</a></li>
-            <li><a href="#section-playground">09 SANDBOX</a></li>
-            <li><a href="#section-deployment">11 COMMISSION</a></li>
-          </ul>
-        </nav>
+    <div class="nav-actions">
+      <a href="pitch.html" class="btn-editorial-outline" title="Open Investor Presentation">PITCH DECK ↗</a>
+      <button class="btn-editorial-primary" data-open-demo>Book Demo</button>
+      <button class="nav-mobile-toggle" aria-label="Toggle Menu">MENU</button>
+    </div>
+  </header>
 
-        <div class="status-badge live">
-          SYSTEM STATUS: ONLINE
-        </div>
-      </header>
-
-      <!-- ===================================================================
-           SECTION 01 — HERO (URGENCY ENGINE)
-           =================================================================== -->
-      <section class="manual-section" id="section-hero">
-        <div class="section-label-row">
-          <span>SECTION 01 / 11 · URGENCY BLUEPRINT</span>
-          <span class="num">01</span>
-        </div>
-
-        <div class="hero-grid">
-          <div class="hero-editorial">
-            <h1>
-              WORK SHOULD NOT <span class="highlight-box">WAIT FOR PEOPLE.</span>
-            </h1>
-            <p class="hero-sub">
-              <strong>Antromat connects conversations, data, and systems.</strong> It captures, understands, and acts automatically. Nothing slips through. Nothing waits for people.
-            </p>
-
-            <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
-              <a href="#section-deployment" class="btn-mechanical">
-                <span>COMMISSION YOUR OS</span>
-                <span class="arrow">→</span>
-              </a>
-              <a href="#section-whatsapp" class="btn-mechanical secondary">
-                <span>WATCH LIVE DEMO</span>
-                <span class="arrow">↓</span>
-              </a>
-            </div>
-
-            <div class="hero-metrics-strip">
-              <div class="hero-metric-item">
-                <div class="val">&lt; 45s</div>
-                <div class="desc">Quote Turnaround</div>
-              </div>
-              <div class="hero-metric-item">
-                <div class="val">0%</div>
-                <div class="desc">Unanswered Leads</div>
-              </div>
-              <div class="hero-metric-item">
-                <div class="val">24/7</div>
-                <div class="desc">Operational Uptime</div>
-              </div>
-            </div>
+  <main>
+    <!-- ====================================================================
+         ARTICLE 00 — THE COVER / HERO
+         ==================================================================== -->
+    <article class="editorial-article hero-cover-section" id="article-cover" data-article-num="00" data-article-title="THE COVER">
+      <div class="editorial-container">
+        <div class="editorial-reading-wrap">
+          <div class="hero-issue-badge">
+            <span>ISSUE 01</span>
+            <span class="dot"></span>
+            <span>THE AI CHIEF OF STAFF</span>
+            <span class="dot"></span>
+            <span>SEPTEMBER 2026</span>
           </div>
 
-          <!-- Live WhatsApp Urgency Simulator -->
-          <div class="hero-simulation-card">
-            <div class="sim-window-header">
-              <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-              <span>INQUIRY_SIMULATION.LOG</span>
-            </div>
-
-            <div class="urgency-timeline-wrapper">
-              <div class="chat-bubble-stream" id="hero-chat-stream">
-                <!-- Populated dynamically via app.js -->
-              </div>
-
-              <div class="urgency-alert-bar">
-                <span class="alert-pulse">REVENUE LEAK DETECTED</span>
-                <span id="hero-leak-counter" style="font-weight:700;">₹ 2,10,000</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 02 — LIVE WHATSAPP DEMO & AI PARSER (FASTER & CLEARER)
-           =================================================================== -->
-      <section class="manual-section" id="section-whatsapp">
-        <div class="section-label-row">
-          <span>SECTION 02 / 11 · CONVERSATIONAL INGESTION</span>
-          <span class="num">02</span>
-        </div>
-
-        <h2 class="section-title">LIVE WHATSAPP DEMO</h2>
-        <p class="section-subtitle">
-          Watch unstructured human conversation transform into clean, actionable business parameters in under 2 seconds.
-        </p>
-
-        <div class="whatsapp-demo-grid">
-          <!-- WhatsApp Mobile Frame -->
-          <div class="phone-chassis">
-            <div class="phone-header">
-              <div class="avatar-circle">AC</div>
-              <div class="phone-client-info">
-                <div class="name">Amit Constructions</div>
-                <div class="sub">Online · WhatsApp Business</div>
-              </div>
-            </div>
-            <div class="phone-chat-body">
-              <div class="chat-msg client">
-                Hi, I need 500 bags of OPC 43 cement delivered to Yavatmal site tomorrow morning by 9 AM. Please send rate.
-                <span class="time-stamp">09:12 AM</span>
-              </div>
-              <div class="typing-indicator-bubble">
-                <span>AI extracting parameters</span>
-                <div class="typing-dots">
-                  <span></span><span></span><span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- AI Extraction Output Panel -->
-          <div class="ai-extractor-panel">
-            <div>
-              <div class="extractor-header">
-                <span>● REAL-TIME INTENT EXTRACTION</span>
-                <span class="status-tag" id="ai-extractor-status">EXTRACTING FIELD 4/6...</span>
-              </div>
-
-              <div class="raw-source-quote">
-                SOURCE: "Hi, I need 500 bags of OPC 43 cement delivered to Yavatmal site tomorrow morning by 9 AM. Please send rate."
-              </div>
-
-              <div class="extracted-fields-grid">
-                <div class="extracted-field-card" id="f-customer">
-                  <div class="field-label">Customer / Entity</div>
-                  <div class="field-val">Amit Constructions</div>
-                </div>
-
-                <div class="extracted-field-card" id="f-product">
-                  <div class="field-label">Product / Material</div>
-                  <div class="field-val">Cement OPC 43</div>
-                </div>
-
-                <div class="extracted-field-card" id="f-quantity">
-                  <div class="field-label">Required Quantity</div>
-                  <div class="field-val">500 Bags</div>
-                </div>
-
-                <div class="extracted-field-card" id="f-deadline">
-                  <div class="field-label">Target Delivery</div>
-                  <div class="field-val">Tomorrow 09:00 AM</div>
-                </div>
-
-                <div class="extracted-field-card" id="f-priority">
-                  <div class="field-label">Deal Priority</div>
-                  <div class="field-val">
-                    <span class="priority-pill">● HIGH PRIORITY</span>
-                  </div>
-                </div>
-
-                <div class="extracted-field-card" id="f-intent">
-                  <div class="field-label">Extracted Intent</div>
-                  <div class="field-val">Purchase Order RFQ</div>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top:20px; font-family:var(--font-mono); font-size:11px; color:var(--neutral-grey); border-top:1px solid var(--border); padding-top:12px;">
-              LATENCY: 340ms · ACCURACY: 99.9% · ROUTE: n8n Execution Graph
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 03 — VISUAL EXECUTION ENGINE WITH REAL-WORLD VISUAL AID BOX
-           =================================================================== -->
-      <section class="manual-section" id="section-engine">
-        <div class="section-label-row">
-          <span>SECTION 03 / 11 · WORKFLOW ORCHESTRATION</span>
-          <span class="num">03</span>
-        </div>
-
-        <h2 class="section-title">VISUAL EXECUTION ENGINE</h2>
-        <p class="section-subtitle">
-          How n8n automates your business logic behind the scenes, paired with a live visual simulation of what actually happens in real-time.
-        </p>
-
-        <div class="n8n-dual-grid">
+          <h1 class="hero-headline">Run your business with an AI Chief of Staff.</h1>
           
-          <!-- Left Column: Technical n8n Canvas -->
-          <div class="n8n-canvas-frame">
-            <div>
-              <div class="n8n-top-bar">
-                <div class="n8n-brand-tag">
-                  <span>⚡ n8n RUNTIME ENGINE — LIVE PIPELINE</span>
-                </div>
-                <div style="font-size:10px;">CLICK ANY NODE TO INSPECT</div>
-              </div>
+          <p class="hero-subhead">
+            Antromat understands conversations, operations, payments and documents — turning everyday business activity into real-time business memory.
+          </p>
 
-              <!-- Nodes Container -->
-              <div class="n8n-nodes-flow-container">
-                <div class="n8n-node-box active-node" data-node="whatsapp">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">💬</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">WhatsApp Trigger</div>
-                  <div class="node-sub">Inbound Message</div>
-                </div>
-
-                <div class="n8n-node-box" data-node="ai">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">🧠</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">AI Intent Engine</div>
-                  <div class="node-sub">OpenAI GPT-4o</div>
-                </div>
-
-                <div class="n8n-node-box" data-node="crm">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">📁</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">Create / Update</div>
-                  <div class="node-sub">Antromat CRM</div>
-                </div>
-
-                <div class="n8n-node-box" data-node="calendar">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">📅</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">Schedule Meeting</div>
-                  <div class="node-sub">Google Calendar</div>
-                </div>
-
-                <div class="n8n-node-box" data-node="invoice">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">📄</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">Generate Invoice</div>
-                  <div class="node-sub">PDF Engine</div>
-                </div>
-
-                <div class="n8n-node-box" data-node="dashboard">
-                  <div class="node-icon-header">
-                    <div class="node-icon-badge">📊</div>
-                    <div class="node-pulse-indicator"></div>
-                  </div>
-                  <div class="node-title">Update Dashboard</div>
-                  <div class="node-sub">Control Center</div>
-                </div>
-              </div>
-
-              <!-- Node Inspector Drawer -->
-              <div class="node-inspector-drawer">
-                <div class="inspector-block">
-                  <div class="label">ACTIVE NODE INSPECTOR</div>
-                  <div id="inspector-name" style="font-weight:700; color:#fff; font-size:11px;">WhatsApp Trigger</div>
-                  <div style="font-size:9px; color:#888; margin-top:2px;">LATENCY: <span id="inspector-latency" style="color:var(--yellow);">45ms</span></div>
-                </div>
-                <div class="inspector-block">
-                  <div class="label">INPUT PAYLOAD</div>
-                  <div class="code-snippet" id="inspector-input">{"from": "+9198220XXXXX", "text": "Need 500 bags cement Yavatmal"}</div>
-                </div>
-                <div class="inspector-block">
-                  <div class="label">OUTPUT PAYLOAD</div>
-                  <div class="code-snippet" id="inspector-output">{"event": "inquiry_received", "timestamp": 1724754500}</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="n8n-engine-metrics">
-              <span>Executing: <strong id="n8n-status-text">WhatsApp Trigger [Status 200 OK]</strong></span>
-              <span>ERROR RATE: <strong>0.00%</strong></span>
-              <span>THROUGHPUT: <strong>1,420 events/day</strong></span>
-            </div>
-          </div>
-
-          <!-- Right Column: Real-World Visual Aid Companion Box -->
-          <div class="visual-aid-box">
-            <div>
-              <div class="visual-aid-header">
-                <span>REAL-WORLD BUSINESS SIMULATION</span>
-                <span class="visual-aid-stage-badge" id="vis-aid-badge">STEP 1 / 6 · INCOMING MESSAGE</span>
-              </div>
-              <div style="font-size:11px; color:#555; margin-bottom:12px;" id="vis-aid-summary">
-                What the business owner and client see happening in real life:
-              </div>
-
-              <!-- Dynamic Visual Card corresponding to the active step -->
-              <div class="visual-aid-content" id="vis-aid-dynamic-body">
-                <!-- Dynamically populated via app.js -->
-              </div>
-            </div>
-
-            <div class="visual-aid-footer">
-              <span>● SYNCHRONIZED WITH n8n RUNTIME</span>
-              <span style="font-weight:700; color:var(--black);">ZERO MANUAL DATA ENTRY</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 04 — AI UNDERSTANDING (SPLIT VIEW)
-           =================================================================== -->
-      <section class="manual-section" id="section-ai-understanding">
-        <div class="section-label-row">
-          <span>SECTION 04 / 11 · DATA STRUCTURING</span>
-          <span class="num">04</span>
-        </div>
-
-        <h2 class="section-title">AI UNDERSTANDING</h2>
-        <p class="section-subtitle">
-          Messy voice notes, Hinglish chats, and informal customer messages converted automatically into structured CRM databases.
-        </p>
-
-        <div class="ai-split-grid">
-          <!-- Left Pane: Raw Chat -->
-          <div class="split-pane">
-            <div class="pane-header">
-              <span>UNSTRUCTURED INCOMING TEXT</span>
-              <span>RAW CHAT</span>
-            </div>
-            <div class="raw-chat-stream">
-              <p>
-                "Bhai, <span class="hl-word">Amit Constructions</span> se bol raha hu. Hume <span class="hl-word">500 bags cement</span> urgently chahiye <span class="hl-word">kal subah 9 baje</span> Yavatmal plant pe. Best rate quote bhejo."
-              </p>
-              <div style="font-family:var(--font-mono); font-size:10px; color:var(--neutral-grey); margin-top:16px;">
-                LANGUAGE: Hinglish (Hindi + English) · DIALECT: Vidarbha Industrial
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Pane: Structured CRM Records -->
-          <div class="split-pane">
-            <div class="pane-header">
-              <span>STRUCTURED CRM ENTITIES</span>
-              <span style="color:var(--success);">PARSED ✓</span>
-            </div>
-            
-            <table class="structured-crm-table">
-              <thead>
-                <tr>
-                  <th>FIELD</th>
-                  <th>EXTRACTED VALUE</th>
-                  <th>STATUS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="highlight-row">
-                  <td>COMPANY</td>
-                  <td>Amit Constructions</td>
-                  <td>VERIFIED</td>
-                </tr>
-                <tr>
-                  <td>ITEM_SKU</td>
-                  <td>Cement OPC 43 (Grade A)</td>
-                  <td>IN_STOCK</td>
-                </tr>
-                <tr>
-                  <td>QUANTITY</td>
-                  <td>500 Units</td>
-                  <td>VALIDATED</td>
-                </tr>
-                <tr>
-                  <td>DELIVERY_SLOT</td>
-                  <td>2026-08-28T09:00:00</td>
-                  <td>LOCKED</td>
-                </tr>
-                <tr>
-                  <td>SITE_LOCATION</td>
-                  <td>Yavatmal Industrial Cluster</td>
-                  <td>MAPPED</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="hero-actions">
+            <button class="btn-editorial-primary" data-open-demo>Book a Live Demo</button>
+            <a href="#article-ask" class="btn-editorial-outline">Experience Ask Antromat ↓</a>
           </div>
         </div>
-      </section>
 
-      <!-- ===================================================================
-           SECTION 05 — AUTOMATED LEAD JOURNEY PIPELINE (KANBAN BOARD)
-           =================================================================== -->
-      <section class="manual-section" id="section-lead-journey">
-        <div class="section-label-row">
-          <span>SECTION 05 / 11 · PIPELINE VELOCITY</span>
-          <span class="num">05</span>
-        </div>
-
-        <h2 class="section-title">LEAD JOURNEY PIPELINE</h2>
-        <p class="section-subtitle">
-          Watch a single customer inquiry physically glide through all 5 deal stages without human manual entry.
-        </p>
-
-        <div class="kanban-pipeline-wrapper">
-          <div class="kanban-columns-track" id="kanban-board-track">
-            
-            <!-- STAGE 1: NEW -->
-            <div class="kanban-column" data-stage="NEW" title="Click to advance to NEW">
-              <div class="kanban-col-header">
-                <span>01 NEW</span>
-                <span class="count-pill">2</span>
-              </div>
-              
-              <!-- Movable Active Card -->
-              <div class="lead-card-movable" id="active-movable-lead">
-                <div class="client-title">Amit Constructions</div>
-                <div class="deal-value">₹ 2,47,800</div>
-                <div class="lead-meta">500 Bags Cement · Yavatmal</div>
-                <div style="margin-top:8px;">
-                  <span class="payment-status-pill" style="font-size:9px; padding:2px 6px; background:#ddd; color:#333; font-weight:700;">PENDING</span>
-                </div>
-              </div>
-
-              <div class="lead-card-static">
-                <div style="font-weight:700;">Shree BuildTech</div>
-                <div style="color:#666;">RMC Inquiry · ₹1.4L</div>
-              </div>
+        <!-- Massive 08:00 AM Founder Dashboard Frame -->
+        <div class="dashboard-frame spotlight-frame">
+          <div class="dashboard-header">
+            <div class="system-id">
+              <span>FOUNDER DASHBOARD · ANTROMAT OS</span>
+              <span style="color:var(--text-subtle);">|</span>
+              <span>WARDHA HUB · 08:00 AM</span>
             </div>
-
-            <!-- STAGE 2: QUALIFIED -->
-            <div class="kanban-column" data-stage="QUALIFIED" title="Click to advance to QUALIFIED">
-              <div class="kanban-col-header">
-                <span>02 QUALIFIED</span>
-                <span class="count-pill">4</span>
-              </div>
-              <div class="lead-card-static">
-                <div style="font-weight:700;">Om Infra Developers</div>
-                <div style="color:#666;">TMT Steel 20T · ₹11.2L</div>
-              </div>
-              <div class="lead-card-static">
-                <div style="font-weight:700;">Patil Contractors</div>
-                <div style="color:#666;">Site Visit Done</div>
-              </div>
-            </div>
-
-            <!-- STAGE 3: MEETING -->
-            <div class="kanban-column" data-stage="MEETING" title="Click to advance to MEETING">
-              <div class="kanban-col-header">
-                <span>03 MEETING</span>
-                <span class="count-pill">3</span>
-              </div>
-              <div class="lead-card-static">
-                <div style="font-weight:700;">BuildWell Corp</div>
-                <div style="color:#666;">Calendar Locked 12:00 PM</div>
-              </div>
-            </div>
-
-            <!-- STAGE 4: QUOTE SENT -->
-            <div class="kanban-column" data-stage="QUOTE SENT" title="Click to advance to QUOTE SENT">
-              <div class="kanban-col-header">
-                <span>04 QUOTE SENT</span>
-                <span class="count-pill">2</span>
-              </div>
-              <div class="lead-card-static">
-                <div style="font-weight:700;">Galaxy Builders</div>
-                <div style="color:#666;">PDF Sent via WhatsApp</div>
-              </div>
-            </div>
-
-            <!-- STAGE 5: PAYMENT -->
-            <div class="kanban-column" data-stage="PAYMENT" title="Click to advance to PAYMENT">
-              <div class="kanban-col-header">
-                <span>05 PAYMENT</span>
-                <span class="count-pill">1</span>
-              </div>
-              <div class="lead-card-static">
-                <div style="font-weight:700;">Metro Infra Ltd</div>
-                <div style="color:var(--success); font-weight:700;">PAID (₹3,80,000)</div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="pipeline-actions-bar">
-            <div class="auto-status-indicator">
-              <span>● AUTO-PROGRESSING PIPELINE</span>
-            </div>
-            <div id="lead-audit-log" style="font-family:var(--font-mono); font-size:11px; color:var(--neutral-grey);">
-              [09:12] Automated status update: <strong>NEW</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 06 — BUILDER CONTROL CENTER (EXECUTIVE TELEMETRY COCKPIT)
-           =================================================================== -->
-      <section class="manual-section" id="section-control-center">
-        <div class="section-label-row">
-          <span>SECTION 06 / 11 · EXECUTIVE TELEMETRY & OPERATIONS</span>
-          <span class="num">06</span>
-        </div>
-
-        <h2 class="section-title">BUILDER CONTROL CENTER</h2>
-        <p class="section-subtitle">
-          Real-time operations cockpit for founders and directors. Every site visit, raw material RFQ, and cash collection tracked live.
-        </p>
-
-        <div class="cockpit-container">
-          <!-- 4 KPI Cards -->
-          <div class="cockpit-kpi-quad">
-            <div class="kpi-stat-card">
-              <div class="kpi-label">TOTAL REVENUE (MTD)</div>
-              <div class="kpi-val" id="kpi-rev-val">₹ 24,85,000</div>
-              <div class="kpi-sub-row">
-                <span style="color:var(--success); font-weight:700;">+18.6% vs target</span>
-                <span style="color:var(--neutral-grey);">42 Deals Won</span>
-              </div>
-              <div class="kpi-progress-bar"><div class="kpi-progress-fill" style="width: 78%;"></div></div>
-            </div>
-
-            <div class="kpi-stat-card">
-              <div class="kpi-label">SITE VISITS & MEETINGS</div>
-              <div class="kpi-val">12 Scheduled</div>
-              <div class="kpi-sub-row">
-                <span style="color:#0055aa; font-weight:700;">+4 auto-booked</span>
-                <span style="color:var(--neutral-grey);">Google Cal Synced</span>
-              </div>
-              <div class="kpi-progress-bar"><div class="kpi-progress-fill" style="width: 65%; background:#0066cc;"></div></div>
-            </div>
-
-            <div class="kpi-stat-card">
-              <div class="kpi-label">CASH COLLECTIONS</div>
-              <div class="kpi-val">₹ 15,42,000</div>
-              <div class="kpi-sub-row">
-                <span style="color:var(--success); font-weight:700;">62% Collected</span>
-                <span style="color:var(--neutral-grey);">0 Overdue > 15d</span>
-              </div>
-              <div class="kpi-progress-bar"><div class="kpi-progress-fill" style="width: 62%; background:var(--success);"></div></div>
-            </div>
-
-            <div class="kpi-stat-card">
-              <div class="kpi-label">ACTIVE PIPELINE VALUE</div>
-              <div class="kpi-val">₹ 48,20,000</div>
-              <div class="kpi-sub-row">
-                <span style="color:var(--black); font-weight:700;">32 Inbound Leads</span>
-                <span style="color:var(--neutral-grey);">Vidarbha Hubs</span>
-              </div>
-              <div class="kpi-progress-bar"><div class="kpi-progress-fill" style="width: 85%;"></div></div>
+            <div class="system-status">
+              <span class="pulse-dot"></span>
+              <span>BUSINESS MEMORY: ACTIVE & REFRESHED</span>
             </div>
           </div>
 
-          <!-- Cockpit Interactive Sub-Nav Tabs -->
-          <div class="cockpit-sub-nav">
-            <div class="cockpit-tabs-group">
-              <button class="cockpit-tab-btn active-cockpit-tab" id="cp-tab-telemetry">01 HOURLY VELOCITY</button>
-              <button class="cockpit-tab-btn" id="cp-tab-calendar">02 WEEKLY SITE CALENDAR</button>
-              <button class="cockpit-tab-btn" id="cp-tab-quotes">03 RECENT DEALS & INVOICES</button>
+          <div class="dashboard-grid">
+            <div class="dashboard-metric-card">
+              <span class="metric-label">Morning Briefing Status</span>
+              <span class="metric-value">08:00 AM</span>
+              <span class="metric-subtext">Synthesized from 420 events</span>
             </div>
-            <div style="font-family:var(--font-mono); font-size:10px; color:var(--neutral-grey);">
-              RUNTIME ENGINE: TELEMETRY STREAM ONLINE
+
+            <div class="dashboard-metric-card">
+              <span class="metric-label">Active Lead Pipeline</span>
+              <span class="metric-value">14 Leads</span>
+              <span class="metric-subtext">3 follow-ups scheduled today</span>
+            </div>
+
+            <div class="dashboard-metric-card">
+              <span class="metric-label">Factory Production</span>
+              <span class="metric-value">94.2%</span>
+              <span class="metric-subtext">1 shipment delayed (inspected)</span>
+            </div>
+
+            <!-- Selective Color Rule: Exactly ONE insight card highlighted green -->
+            <div class="dashboard-metric-card selective-highlight">
+              <span class="metric-label">Pending Collections</span>
+              <span class="metric-value">₹ 1,82,400</span>
+              <span class="metric-subtext">3 invoices cleared yesterday</span>
             </div>
           </div>
 
-          <!-- Cockpit Multi-View Main Grid -->
-          <div class="dashboard-cockpit-grid">
-            
-            <!-- Left View Pane: Dynamic Views -->
-            <div class="cockpit-view-pane" id="cockpit-dynamic-pane">
-              <!-- View 1: Telemetry (Default) -->
-              <div id="view-telemetry" style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
-                <div class="cockpit-pane-header">
-                  <span>HOURLY OPERATIONAL VELOCITY (EVENTS / HR)</span>
-                  <span style="color:var(--success);">99.8% BOT DISPATCH ✓</span>
-                </div>
-                <div style="width:100%; height:190px; background:#ECE8E0; border:1px solid var(--border-strong); position:relative;">
-                  <svg width="100%" height="190" preserveAspectRatio="none">
-                    <line x1="0" y1="50" x2="800" y2="50" stroke="#DDD" stroke-width="1" stroke-dasharray="2 2" />
-                    <line x1="0" y1="100" x2="800" y2="100" stroke="#DDD" stroke-width="1" stroke-dasharray="2 2" />
-                    <line x1="0" y1="150" x2="800" y2="150" stroke="#DDD" stroke-width="1" stroke-dasharray="2 2" />
-                    <polyline
-                      fill="none"
-                      stroke="#111111"
-                      stroke-width="3"
-                      points="0,150 70,130 140,160 210,90 280,110 350,55 420,80 490,40 560,65 630,25 700,45 780,20"
-                    />
-                    <circle cx="780" cy="20" r="5" fill="var(--yellow)" stroke="#111" stroke-width="2" />
-                  </svg>
-                </div>
-                <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:10px; color:var(--neutral-grey); margin-top:8px;">
-                  <span>08:00 (START)</span>
-                  <span>12:00 (PEAK RFQ)</span>
-                  <span>16:00 (DISPATCH)</span>
-                  <span>20:00 (CLOSING)</span>
-                </div>
+          <div class="dashboard-lower-split">
+            <div class="dashboard-panel">
+              <div class="panel-title">
+                <span>TODAY'S OPERATIONAL PRIORITIES</span>
+                <span style="font-size:10px; color:var(--text-muted);">AUTO-GENERATED BRIEFING</span>
               </div>
-
-              <!-- View 2: Weekly Calendar (Hidden by default) -->
-              <div id="view-calendar" style="display:none; flex-direction:column; justify-content:space-between; height:100%;">
-                <div class="cockpit-pane-header">
-                  <span>DISPATCH & SITE VISIT CALENDAR (25 - 30 AUG)</span>
-                  <span style="color:#0055aa;">AUTO-SCHEDULED</span>
-                </div>
-                <div class="calendar-week-grid">
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">MON 25</div>
-                    <div class="cal-event-pill site">10 AM: Site Visit (Amit Const.)</div>
-                    <div class="cal-event-pill meeting">12 PM: Quote Review</div>
-                  </div>
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">TUE 26</div>
-                    <div class="cal-event-pill meeting">11 AM: Om Infra Meeting</div>
-                  </div>
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">WED 27</div>
-                    <div class="cal-event-pill paid">02 PM: Payment Reconciled</div>
-                    <div class="cal-event-pill site">04 PM: Yavatmal Site Visit</div>
-                  </div>
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">THU 28</div>
-                    <div class="cal-event-pill meeting">10 AM: BuildWell Review</div>
-                  </div>
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">FRI 29</div>
-                    <div class="cal-event-pill site">11 AM: Steel Inspection</div>
-                    <div class="cal-event-pill paid">03 PM: Token Received</div>
-                  </div>
-                  <div class="cal-day-col">
-                    <div class="cal-day-header">SAT 30</div>
-                    <div class="cal-event-pill meeting">12 PM: Weekly Director Tally</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- View 3: Recent Quotes Ledger (Hidden by default) -->
-              <div id="view-quotes" style="display:none; flex-direction:column; justify-content:space-between; height:100%;">
-                <div class="cockpit-pane-header">
-                  <span>RECENT AUTOMATED INVOICES & QUOTES</span>
-                  <span style="color:var(--success);">LIVE LEDGER</span>
-                </div>
-                <table class="quotes-ledger-table">
-                  <thead>
-                    <tr>
-                      <th>REF #</th>
-                      <th>CLIENT</th>
-                      <th>REQUIREMENT</th>
-                      <th>AMOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>INV-00234</strong></td>
-                      <td>Amit Constructions (Yavatmal)</td>
-                      <td>500 Bags OPC 43</td>
-                      <td>₹ 2,47,800</td>
-                      <td><span class="crm-badge won">PAID</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>QUO-00891</strong></td>
-                      <td>Om Infra Developers (Nagpur)</td>
-                      <td>20 Tons TMT Fe550D</td>
-                      <td>₹ 11,20,000</td>
-                      <td><span class="crm-badge high">QUOTE SENT</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>QUO-00892</strong></td>
-                      <td>Patil Contractors (Wardha)</td>
-                      <td>RMC Ready Mix Concrete</td>
-                      <td>₹ 3,40,000</td>
-                      <td><span class="crm-badge high">SITE VISITED</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>INV-00233</strong></td>
-                      <td>Galaxy Infrastructure</td>
-                      <td>AAC Blocks 600x200</td>
-                      <td>₹ 1,85,000</td>
-                      <td><span class="crm-badge won">PAID</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Right View Pane: Live Activity Log Stream -->
-            <div class="activity-feed-panel">
-              <div class="feed-header">
-                <span>● LIVE ACTIVITY LOG</span>
-                <span>AUTO-STREAM</span>
-              </div>
-              <ul class="feed-items-list" id="telemetry-feed-stream">
-                <!-- Dynamically populated via app.js -->
+              <ul class="priority-list">
+                <li class="priority-item">
+                  <span class="priority-time">08:15 AM</span>
+                  <span class="priority-desc">Follow up with Mahesh Textiles on ₹86,400 quotation sent last Thursday.</span>
+                  <span class="priority-tag badge-blue">SALES</span>
+                </li>
+                <li class="priority-item">
+                  <span class="priority-time">10:30 AM</span>
+                  <span class="priority-desc">Approve revised fabric cutting plan for RK Garments export batch #248.</span>
+                  <span class="priority-tag" style="background:rgba(255,255,255,0.06); color:var(--text-stone);">OPS</span>
+                </li>
+                <li class="priority-item">
+                  <span class="priority-time">02:00 PM</span>
+                  <span class="priority-desc">Review transport receipt for Wardha loom dispatch consignment #890.</span>
+                  <span class="priority-tag" style="background:rgba(255,255,255,0.06); color:var(--text-stone);">LOGISTICS</span>
+                </li>
               </ul>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 07 — INDUSTRY BLUEPRINTS & ARCHITECTURE MATRIX
-           =================================================================== -->
-      <section class="manual-section" id="section-industry">
-        <div class="section-label-row">
-          <span>SECTION 07 / 11 · SECTOR ARCHITECTURE</span>
-          <span class="num">07</span>
-        </div>
-
-        <h2 class="section-title">INDUSTRY BLUEPRINTS</h2>
-        <p class="section-subtitle">
-          Tailored operational logic engineered for real SME industries across Vidarbha and Maharashtra.
-        </p>
-
-        <!-- Segmented Mechanical Tabs -->
-        <div class="industry-tab-bar">
-          <button class="industry-tab-btn active-tab" data-industry="builder">BUILDER</button>
-          <button class="industry-tab-btn" data-industry="hospital">HOSPITAL</button>
-          <button class="industry-tab-btn" data-industry="factory">FACTORY</button>
-          <button class="industry-tab-btn" data-industry="warehouse">WAREHOUSE</button>
-        </div>
-
-        <!-- Dynamic Display Card -->
-        <div class="industry-display-card">
-          <div class="industry-info-col">
-            <h3 id="ind-title">CONSTRUCTION & REAL ESTATE</h3>
-            <p id="ind-desc">
-              Automates raw material procurement, site visit calendar dispatch, contractor rate cards, and progress payment alerts.
-            </p>
-            <div class="industry-kpi-list" id="ind-kpis">
-              <!-- Rendered dynamically -->
-            </div>
-          </div>
-
-          <div class="industry-flow-diagram">
-            <div style="font-size:10px; color:var(--yellow); font-weight:700; margin-bottom:8px;">EXECUTION BLUEPRINT FLOW</div>
-            <div id="ind-flow" style="display:flex; flex-direction:column; gap:12px;">
-              <!-- Rendered dynamically -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Cross-Industry Comparison Matrix Table -->
-        <div class="industry-comparison-table-wrapper">
-          <div class="matrix-title">CROSS-INDUSTRY AUTOMATION ARCHITECTURE MATRIX</div>
-          <table class="industry-matrix-table">
-            <thead>
-              <tr>
-                <th>SECTOR</th>
-                <th>CORE TRIGGER SOURCE</th>
-                <th>AI PROCESSING LOGIC</th>
-                <th>CONNECTED SYSTEMS</th>
-                <th>END OUTPUT DELIVERED</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>CONSTRUCTION</strong></td>
-                <td>WhatsApp RFQ from Contractor</td>
-                <td>Material SKU & Mill Price Matching</td>
-                <td>n8n + Antromat CRM + Google Cal</td>
-                <td>Instant GST PDF Quote in &lt; 45s</td>
-              </tr>
-              <tr>
-                <td><strong>HOSPITAL</strong></td>
-                <td>Patient OPD / Lab Booking Chat</td>
-                <td>Doctor Roster & Symptom Triage</td>
-                <td>Hospital HMS + WhatsApp Cloud API</td>
-                <td>Token Slot & PDF Report Delivery</td>
-              </tr>
-              <tr>
-                <td><strong>FACTORY</strong></td>
-                <td>Supervisor Breakdown / PO Text</td>
-                <td>Vendor Rate Card & Inventory Tally</td>
-                <td>ERP + Vendor Webhook + Telegram</td>
-                <td>Auto-Dispatched Purchase Order</td>
-              </tr>
-              <tr>
-                <td><strong>WAREHOUSE</strong></td>
-                <td>Transporter Inbound Truck SMS</td>
-                <td>E-Way Bill OCR & Gate Allocation</td>
-                <td>WMS + Security Gate Console</td>
-                <td>QR Gate Pass & Dock Assignment</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 08 — AUTOMATION LIBRARY & SPEC DRAWER
-           =================================================================== -->
-      <section class="manual-section" id="section-library">
-        <div class="section-label-row">
-          <span>SECTION 08 / 11 · MODULE CATALOG</span>
-          <span class="num">08</span>
-        </div>
-
-        <h2 class="section-title">AUTOMATION LIBRARY</h2>
-        <p class="section-subtitle">
-          20 battle-tested operations modules ready to deploy immediately into your business. Click any card to inspect full engineering specifications.
-        </p>
-
-        <!-- Category Filters -->
-        <div class="library-filters-bar">
-          <button class="filter-chip active-chip" data-filter="all">ALL (20)</button>
-          <button class="filter-chip" data-filter="sales">SALES & CRM</button>
-          <button class="filter-chip" data-filter="finance">FINANCE & GST</button>
-          <button class="filter-chip" data-filter="ops">OPERATIONS & SITE</button>
-          <button class="filter-chip" data-filter="reports">EXECUTIVE REPORTS</button>
-        </div>
-
-        <!-- 20 Cards Grid -->
-        <div class="automation-cards-grid" id="automation-cards-container">
-          <!-- Populated via app.js -->
-        </div>
-      </section>
-
-      <!-- Slide-Out Mechanical Spec Drawer Modal -->
-      <div class="spec-drawer-backdrop" id="spec-drawer-modal">
-        <div class="spec-drawer-sheet">
-          <div>
-            <div class="drawer-header">
-              <div>
-                <span id="drawer-spec-code" style="background:var(--yellow); color:#000; font-weight:700; padding:2px 8px; font-size:11px;">A01</span>
-                <h3 id="drawer-spec-title" style="font-family:var(--font-heading); font-size:22px; text-transform:uppercase; margin-top:8px;">WhatsApp Follow-Up</h3>
+            <div class="dashboard-panel">
+              <div class="panel-title">
+                <span>REAL-TIME KNOWLEDGE SYNC</span>
+                <span style="font-size:10px; color:var(--text-muted);">ALL SOURCES</span>
               </div>
-              <button class="drawer-close-btn" id="drawer-close-btn">✕</button>
+              <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-stone); display:flex; flex-direction:column; gap:10px;">
+                <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>WhatsApp Conversations</span>
+                  <span style="color:var(--text-muted);">18 New Captured</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>Invoices & Challans</span>
+                  <span style="color:var(--text-muted);">6 Synced via Tally</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>Production Photos</span>
+                  <span style="color:var(--text-muted);">9 Loom Updates</span>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding-top:4px;">
+                  <span>Context Integrity</span>
+                  <span style="color:#38b27d;">100% Grounded</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">FOUNDER DASHBOARD — 08:00 AM</span>
+          <span class="caption-time">Every morning begins with one briefing.</span>
+        </figcaption>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 01 — THE REALITY OF RUNNING A BUSINESS (CHAOS)
+         ==================================================================== -->
+    <article class="editorial-article" id="article-reality" data-article-num="01" data-article-title="THE REALITY">
+      <div class="editorial-container">
+        <!-- Running Folio Header -->
+        <div class="editorial-running-folio">
+          <span>CHAPTER I — THE CRISIS OF MEMORY</span>
+          <span>ANTROMAT JOURNAL</span>
+          <span>SEPTEMBER 2026 EDITION</span>
+        </div>
+
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 01</span>
+          <span class="article-tag">THE PROBLEM</span>
+        </header>
+
+        <h2 class="article-headline">
+          Businesses don't have a data problem.<br>
+          They have a memory problem.
+        </h2>
+
+        <p class="article-paragraph drop-cap">
+          Every day your business creates hundreds of customer conversations, quotations, invoices, production updates and payment reminders. Most of them disappear. The owner remembers everything. Until they can't.
+        </p>
+
+        <!-- Figure Marginalia & Documentary Photography -->
+        <span class="editorial-figure-tag">FIG. 01.1 — FOUNDER DESK FLATLAY · WARDHA</span>
+        <div class="spotlight-frame" style="margin: var(--space-24) 0 var(--space-48); max-height: 480px; overflow: hidden;">
+          <img src="assets/office_desk.jpg" alt="Business Activity Flatlay" class="frame-canvas" style="width: 100%; height: 480px; object-fit: cover;">
+          <div class="spotlight-reveal-layer" style="background-image: url('assets/office_desk.jpg'); background-size: cover; background-position: center;"></div>
+        </div>
+        <figcaption class="editorial-caption">
+          <span class="caption-context">BUSINESS ACTIVITY — ONE ORDINARY MORNING</span>
+          <span class="caption-time">Hundreds of loose conversations. Zero institutional memory.</span>
+        </figcaption>
+
+        <!-- 3 Editorial Panels -->
+        <div class="chaos-panels-grid">
+          <!-- Panel 1: Customer Conversations Disappear -->
+          <div class="chaos-panel-card">
+            <div>
+              <h3 class="panel-head-title">Customer conversations disappear.</h3>
+              <p class="panel-body-text">
+                A customer asks for a quotation. Someone replies. Someone forgets. The opportunity disappears into chat archives.
+              </p>
             </div>
 
-            <p id="drawer-spec-desc" style="font-size:13px; line-height:1.5; color:#333; margin-bottom:24px;">
-              Auto-nudges quotation recipients at 24h & 48h intervals.
+            <div class="chaos-preview-box">
+              <div class="chat-preview-item">
+                <div class="chat-bubble-gray">"Can you quote for 2,000 meters of combed cotton fabric by tomorrow?"</div>
+                <div class="chat-bubble-selective-amber">
+                  ★ LEAD — 09:17 AM: This enquiry became an untracked ₹12 lakh opportunity.
+                </div>
+              </div>
+            </div>
+            
+            <figcaption class="editorial-caption" style="margin-top:12px; border-top:none;">
+              <span class="caption-context">WHATSAPP CHAT ARCHIVE</span>
+              <span class="caption-time">UNTRACKED</span>
+            </figcaption>
+          </div>
+
+          <!-- Panel 2: Operations Live in People's Heads -->
+          <div class="chaos-panel-card">
+            <div>
+              <h3 class="panel-head-title">Operations live inside people's heads.</h3>
+              <p class="panel-body-text">
+                Production updates arrive as photos. Dispatch updates arrive as voice notes. Inventory updates live in private chats. No one sees the full picture.
+              </p>
+            </div>
+
+            <div class="chaos-preview-box">
+              <div class="factory-tag-preview">
+                <span style="color:var(--text-stone);">LOOM #04 SHIFT UPDATE</span>
+                <span class="factory-tag-badge">DISPATCH TAG: MH-31</span>
+              </div>
+              
+              <!-- Interactive Ground Voice Note Micro-Player -->
+              <div class="voice-note-card" id="voice-note-demo" title="Click to simulate voice note listening">
+                <div class="voice-play-btn" id="voice-play-icon">▶</div>
+                <div class="voice-waveform-track">
+                  <span class="waveform-bar" style="height: 10px;"></span>
+                  <span class="waveform-bar" style="height: 16px;"></span>
+                  <span class="waveform-bar" style="height: 8px;"></span>
+                  <span class="waveform-bar" style="height: 20px;"></span>
+                  <span class="waveform-bar" style="height: 14px;"></span>
+                  <span class="waveform-bar" style="height: 18px;"></span>
+                  <span class="waveform-bar" style="height: 12px;"></span>
+                  <span class="waveform-bar" style="height: 16px;"></span>
+                  <span class="waveform-bar" style="height: 9px;"></span>
+                </div>
+                <span class="voice-meta-time">0:42 · MARATHI/HINDI</span>
+              </div>
+            </div>
+
+            <figcaption class="editorial-caption" style="margin-top:12px; border-top:none;">
+              <span class="caption-context">FACTORY FLOOR MEMO</span>
+              <span class="caption-time">OFF-RECORD VOICE NOTE</span>
+            </figcaption>
+          </div>
+
+          <!-- Panel 3: Money Needs Chasing -->
+          <div class="chaos-panel-card">
+            <div>
+              <h3 class="panel-head-title">Money needs chasing.</h3>
+              <p class="panel-body-text">
+                Invoices are created. Payments are delayed. Reminders are forgotten. Cash flow becomes invisible and stressful.
+              </p>
+            </div>
+
+            <div class="chaos-preview-box">
+              <div class="invoice-slip-preview">
+                <div class="invoice-row">
+                  <span>INVOICE #INV-492</span>
+                  <span>₹ 1,45,000</span>
+                </div>
+                <div class="invoice-row overdue-red">
+                  <span>OVERDUE BY 34 DAYS</span>
+                  <span>ATTENTION REQ.</span>
+                </div>
+              </div>
+            </div>
+
+            <figcaption class="editorial-caption" style="margin-top:12px; border-top:none;">
+              <span class="caption-context">LEDGER NOTE</span>
+              <span class="caption-time">UNSETTLED</span>
+            </figcaption>
+          </div>
+        </div>
+
+        <figure class="editorial-pullquote">
+          <q>"Your company already knows everything. It just can't remember it."</q>
+          <span class="quote-attribution">Antromat Editorial Philosophy</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 02 — BUSINESS MEMORY
+         ==================================================================== -->
+    <article class="editorial-article" id="article-memory" data-article-num="02" data-article-title="BUSINESS MEMORY">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 02</span>
+          <span class="article-tag">THE CATEGORY</span>
+        </header>
+
+        <h2 class="article-headline">
+          Everything your business knows.<br>
+          One place that remembers it.
+        </h2>
+
+        <p class="article-paragraph drop-cap">
+          Antromat connects conversations, documents, orders, payments, customers and operations into one continuously evolving memory of your business.
+        </p>
+
+        <!-- 3-Block Infographic: Inputs -> Core -> Insights -->
+        <span class="editorial-figure-tag">FIG. 02.1 — LIVING MEMORY INGESTION ENGINE</span>
+        <div class="memory-infographic-wrap spotlight-frame">
+          <div class="memory-col">
+            <span class="memory-col-title">INPUT STREAMS (ALL MONOCHROME)</span>
+            <div class="memory-source-pill">WhatsApp & Telegram Chats</div>
+            <div class="memory-source-pill">Invoices & GST Challans</div>
+            <div class="memory-source-pill">Voice Notes & Transcripts</div>
+            <div class="memory-source-pill">Production Floor Photos</div>
+            <div class="memory-source-pill">Purchase Orders & PDFs</div>
+          </div>
+
+          <div class="memory-center-core">
+            <h3 class="memory-core-title">Business Memory</h3>
+            <p class="memory-core-sub">THE LIVING MEMORY OF YOUR COMPANY</p>
+            <p style="font-family:var(--font-sans); font-size:12px; color:var(--text-stone); margin-top:14px; line-height:1.5;">
+              Not a cold database. A living contextual engine connecting entities, timelines, and commitments.
             </p>
+          </div>
 
-            <div class="spec-param-row">
-              <div class="label">TRIGGER CONDITION</div>
-              <div class="val" id="drawer-spec-trigger">Quote sent > 24h no reply</div>
+          <div class="memory-col">
+            <span class="memory-col-title">SYNTHESIZED INSIGHTS</span>
+            <div class="memory-insight-pill selective-blue">
+              <span>Morning Briefing</span>
+              <span>08:00 AM</span>
+            </div>
+            <div class="memory-insight-pill">
+              <span>Overdue Follow-ups</span>
+              <span>Instant</span>
+            </div>
+            <div class="memory-insight-pill">
+              <span>Production Delays</span>
+              <span>Preempted</span>
+            </div>
+            <div class="memory-insight-pill">
+              <span>Customer Timeline</span>
+              <span>Complete</span>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">BUSINESS MEMORY ENGINE</span>
+          <span class="caption-time">Information becomes relationships. Relationships become intelligence.</span>
+        </figcaption>
+
+        <!-- Relationship Context Timeline -->
+        <div style="margin-top:var(--space-72);">
+          <h3 style="font-family:var(--font-serif); font-size:1.85rem; color:var(--text-warm-white); margin-bottom:12px;">
+            Memory isn't storage. It's context.
+          </h3>
+          <p class="article-paragraph">
+            Antromat remembers that a quotation belongs to a customer, who belongs to a company, who has unpaid invoices, whose shipment was delayed yesterday. That context becomes searchable.
+          </p>
+
+          <div class="relationship-timeline">
+            <div class="rel-node">Customer (Mahesh Textiles)</div>
+            <div class="rel-node active-focus">Quotation (₹12,40,000)</div>
+            <div class="rel-node">Tax Invoice (#INV-890)</div>
+            <div class="rel-node">Dispatch (Loom Batch 4)</div>
+            <div class="rel-node">Payment Reminder</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 03 — SALES WORKSPACE
+         ==================================================================== -->
+    <article class="editorial-article" id="article-sales" data-article-num="03" data-article-title="SALES">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 03</span>
+          <span class="article-tag">SALES & REVENUE</span>
+        </header>
+
+        <h2 class="article-headline">
+          Every customer conversation<br>deserves a follow-up.
+        </h2>
+
+        <p class="article-paragraph">
+          Sales shouldn't depend on remembering who texted yesterday. Antromat remembers every enquiry, quotes with precision, and drafts reminders at the exact right moment.
+        </p>
+
+        <div class="sales-workspace-grid">
+          <!-- Lead Pipeline Workspace -->
+          <div class="dashboard-panel">
+            <div class="panel-title">
+              <span>SALES WORKSPACE · LIVE FOLLOW-UP PIPELINE</span>
+              <span style="font-size:10px; color:var(--text-muted);">MONOCHROME VIEW</span>
             </div>
 
-            <div class="spec-param-row">
-              <div class="label">SYSTEM ACTION</div>
-              <div class="val" id="drawer-spec-action">Polite WhatsApp inquiry message + CTA</div>
-            </div>
+            <div class="sales-pipeline-wrap">
+              <div class="pipeline-col">
+                <span class="pipeline-col-header">
+                  <span>NEW ENQUIRIES</span>
+                  <span>(4)</span>
+                </span>
+                <div class="lead-deal-card">
+                  <div class="client-name">Bombay Apparel Co.</div>
+                  <div class="deal-val">₹ 4,50,000 · Cotton 40s</div>
+                </div>
+                <div class="lead-deal-card">
+                  <div class="client-name">Vidarbha Weavers</div>
+                  <div class="deal-val">₹ 1,80,000 · Yarn Supply</div>
+                </div>
+              </div>
 
-            <div class="spec-param-row">
-              <div class="label">EXPECTED BUSINESS ROI</div>
-              <div class="val" id="drawer-spec-roi" style="color:var(--success); font-weight:700;">₹35,000/mo closed deals</div>
-            </div>
+              <div class="pipeline-col">
+                <span class="pipeline-col-header">
+                  <span>QUOTED</span>
+                  <span>(6)</span>
+                </span>
+                <div class="lead-deal-card">
+                  <div class="client-name">Gujarat Cotton Corp</div>
+                  <div class="deal-val">₹ 8,20,000 · Sent Mon</div>
+                </div>
+              </div>
 
-            <div class="spec-param-row">
-              <div class="label">RUNTIME ENGINE</div>
-              <div class="val">n8n Execution Graph + WhatsApp Cloud API</div>
+              <div class="pipeline-col">
+                <span class="pipeline-col-header">
+                  <span>FOLLOW-UP DUE</span>
+                  <span style="color:var(--focus-amber); font-weight:600;">(3)</span>
+                </span>
+                <!-- Selective color on active high-priority lead -->
+                <div class="lead-deal-card selective-amber">
+                  <div class="client-name">Mahesh Textiles</div>
+                  <div class="deal-val">★ ₹ 12,00,000 · DUE TODAY</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div>
-            <a href="#section-deployment" class="btn-mechanical dark" style="width:100%; justify-content:center;">
-              <span>COMMISSION THIS MODULE</span>
-              <span class="arrow">→</span>
-            </a>
+          <!-- AI Contextual Follow-up Box -->
+          <div class="ai-suggestion-box">
+            <div>
+              <div class="ai-suggestion-header">
+                <span class="badge-blue" style="padding:2px 8px; font-size:10px;">AI CHIEF OF STAFF</span>
+                <span>RECOMMENDED ACTION</span>
+              </div>
+              <p style="font-size:13px; color:var(--text-stone); line-height:1.5;">
+                Mahesh Textiles requested a revision on delivery timelines 3 days ago. They typically settle orders before Friday.
+              </p>
+              <div class="ai-action-callout">
+                "Hi Rajesh-ji, following up on quotation #Q-204 for 2,000m fabric. Loom shift 2 confirmed dispatch by next Wednesday. Shall we confirm the booking?"
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; padding-top:16px; border-top:1px solid var(--border-dark-subtle);">
+              <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted);">AUTO-DRAFT READY</span>
+              <button class="btn-editorial-primary" style="padding:6px 14px; font-size:10px;">DISPATCH VIA WHATSAPP</button>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">SALES WORKSPACE · LIVE FOLLOW-UP PIPELINE</span>
+          <span class="caption-time">Never lose another customer conversation.</span>
+        </figcaption>
+
+        <figure class="editorial-pullquote">
+          <q>"Sales isn't about remembering. It's about responding at the right moment."</q>
+          <span class="quote-attribution">Antromat Sales Principle</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 04 — OPERATIONS
+         ==================================================================== -->
+    <article class="editorial-article" id="article-operations" data-article-num="04" data-article-title="OPERATIONS">
+      <div class="editorial-container">
+        <!-- Running Folio Header -->
+        <div class="editorial-running-folio">
+          <span>CHAPTER II — THE GROUND TRUTH</span>
+          <span>ANTROMAT JOURNAL</span>
+          <span>SEPTEMBER 2026 EDITION</span>
+        </div>
+
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 04</span>
+          <span class="article-tag">FACTORY & FLOOR</span>
+        </header>
+
+        <h2 class="article-headline">
+          Know what's happening<br>without calling everyone.
+        </h2>
+
+        <p class="article-paragraph drop-cap">
+          Operations generate thousands of small updates every day. Antromat turns them into one calm operational picture — from textile mills to chemical reactors.
+        </p>
+
+        <!-- Figure Marginalia & Documentary Photography -->
+        <span class="editorial-figure-tag">FIG. 04.1 — VIDARBHA WEAVING LOOM FLOOR</span>
+        <div class="spotlight-frame" style="margin: var(--space-24) 0 var(--space-48); max-height: 520px; overflow: hidden;">
+          <img src="assets/textile_mill.jpg" alt="Textile Mill in Vidarbha, Maharashtra" class="frame-canvas" style="width: 100%; height: 520px; object-fit: cover;">
+          <div class="spotlight-reveal-layer" style="background-image: url('assets/textile_mill.jpg'); background-size: cover; background-position: center;"></div>
+        </div>
+        <figcaption class="editorial-caption">
+          <span class="caption-context">TEXTILE MILL — WARDHA</span>
+          <span class="caption-time">Dispatch completed at 2:34 PM.</span>
+        </figcaption>
+
+        <!-- Production Stage Tracker -->
+        <div class="dashboard-panel" style="margin:var(--space-48) 0;">
+          <div class="panel-title">
+            <span>TEXTILE MILL · WARDHA — PRODUCTION STAGES</span>
+            <span style="font-size:10px; color:var(--text-muted);">LIVE TRACKER</span>
+          </div>
+
+          <div class="production-tracker-grid">
+            <div class="prod-stage-card">
+              <div class="stage-name">01 SPINNING</div>
+              <div style="color:var(--text-warm-white); font-weight:600;">100% COMPLETE</div>
+              <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">1,400 kg yarn</div>
+            </div>
+
+            <div class="prod-stage-card">
+              <div class="stage-name">02 WEAVING</div>
+              <div style="color:var(--text-warm-white); font-weight:600;">100% COMPLETE</div>
+              <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">Loom 1–4</div>
+            </div>
+
+            <div class="prod-stage-card">
+              <div class="stage-name">03 DYEING</div>
+              <div style="color:var(--text-warm-white); font-weight:600;">ON SCHEDULE</div>
+              <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">Navy Batch #12</div>
+            </div>
+
+            <!-- Delayed Stage highlighted in Brick Red -->
+            <div class="prod-stage-card delayed-red">
+              <div class="stage-name" style="color:#ff7670;">04 INSPECTION</div>
+              <div style="font-weight:600;">DELAYED (2H)</div>
+              <div style="font-size:10px; margin-top:4px;">Transport delay</div>
+            </div>
+
+            <div class="prod-stage-card">
+              <div class="stage-name">05 DISPATCH</div>
+              <div style="color:var(--text-subtle);">PENDING STAGE 4</div>
+              <div style="font-size:10px; color:var(--text-muted); margin-top:4px;">Vehicle MH-31</div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">TEXTILE MILL — WARDHA</span>
+          <span class="caption-time">Dispatch completed at 2:34 PM.</span>
+        </figcaption>
+
+        <figure class="editorial-pullquote">
+          <q>"The best operations teams don't chase updates. They read the story."</q>
+          <span class="quote-attribution">Antromat Operations Manifesto</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 05 — FINANCE
+         ==================================================================== -->
+    <article class="editorial-article" id="article-finance" data-article-num="05" data-article-title="FINANCE">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 05</span>
+          <span class="article-tag">CASH FLOW</span>
+        </header>
+
+        <h2 class="article-headline">
+          Money shouldn't need chasing.
+        </h2>
+
+        <p class="article-paragraph drop-cap">
+          Invoices shouldn't disappear into conversations. Payments shouldn't depend on reminders written in notebooks.
+        </p>
+
+        <!-- Figure Marginalia & Scanned Tax Invoice with Selective Overdue Stamp -->
+        <div style="max-width: 860px; margin: var(--space-24) auto 0;">
+          <span class="editorial-figure-tag">RECORD #INV-892 · TALLY PRIME LEDGER SYNC</span>
+        </div>
+        <div class="spotlight-frame" style="margin: 8px auto var(--space-48); max-width: 860px; max-height: 520px; overflow: hidden; border-radius: var(--radius-md);">
+          <img src="assets/scanned_invoice.jpg" alt="Official Printed Tax Invoice" class="frame-canvas" style="width: 100%; height: 520px; object-fit: cover;">
+          <div class="spotlight-reveal-layer" style="background-image: url('assets/scanned_invoice.jpg'); background-size: cover; background-position: center;"></div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">PAYMENT REMINDER — DAY 30</span>
+          <span class="caption-time">Outstanding amount highlighted automatically without manual tallying.</span>
+        </figcaption>
+
+        <figure class="editorial-pullquote">
+          <q>"Visibility creates cash flow."</q>
+          <span class="quote-attribution">Antromat Financial Rule</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 06 — ASK ANTROMAT ANYTHING (EMOTIONAL CENTERPIECE)
+         ==================================================================== -->
+    <article class="editorial-article" id="article-ask" data-article-num="06" data-article-title="ASK ANTROMAT">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 06</span>
+          <span class="article-tag">INTERACTIVE CENTERPIECE</span>
+        </header>
+
+        <h2 class="article-headline serif-display">
+          Ask your company anything.
+        </h2>
+
+        <p class="article-paragraph">
+          Every conversation, payment, quotation, dispatch, invoice and production update becomes searchable. Ask questions naturally. Receive answers grounded in your business.
+        </p>
+
+        <!-- Interactive Interview Console -->
+        <div class="ask-antromat-console">
+          <div class="transcript-query-picker">
+            <button class="query-chip active" data-query="q1">01 · Overdue Payments</button>
+            <button class="query-chip" data-query="q2">02 · Daily Summary</button>
+            <button class="query-chip" data-query="q3">03 · Order #248 Delay</button>
+            <button class="query-chip" data-query="q4">04 · Daily Priorities</button>
+          </div>
+
+          <div class="transcript-conversation-stream">
+            <div class="transcript-entry">
+              <span class="speaker-label">OWNER</span>
+              <div class="transcript-bubble-owner" id="transcript-owner-q">
+                "Which customers haven't paid in the last 30 days?"
+              </div>
+            </div>
+
+            <div class="transcript-entry">
+              <span class="speaker-label speaker-antromat">ANTROMAT AI CHIEF OF STAFF</span>
+              <div class="transcript-bubble-antromat" id="transcript-antromat-a">
+                <span class="typing-cursor"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">ASK ANTROMAT — LIVE TRANSCRIPT</span>
+          <span class="caption-time">Grounded exclusively on your company's actual records.</span>
+        </figcaption>
+
+        <figure class="editorial-pullquote">
+          <q>"Your business becomes searchable."</q>
+          <span class="quote-attribution">Issue 01 Centerpiece</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 07 — MORNING BRIEFING
+         ==================================================================== -->
+    <article class="editorial-article" id="article-briefing" data-article-num="07" data-article-title="MORNING BRIEFING">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 07</span>
+          <span class="article-tag">EXECUTIVE INTELLIGENCE</span>
+        </header>
+
+        <h2 class="article-headline">
+          Every morning starts with one page.
+        </h2>
+
+        <p class="article-paragraph">
+          Instead of opening five apps and making twenty phone calls, Antromat tells you what matters today before operations begin.
+        </p>
+
+        <!-- Newspaper Front-Page Inspired Layout -->
+        <div class="newspaper-briefing-wrap spotlight-frame">
+          <div class="newspaper-meta-bar">
+            <span>ANTROMAT DISPATCH · EXECUTIVE BRIEFING</span>
+            <span>WEDNESDAY, 16 SEPTEMBER 2026</span>
+            <span>WARDHA HEADQUARTERS · 08:00 AM</span>
+          </div>
+
+          <!-- Printed Daily Executive Briefing Sheet with Selective Blue Badge -->
+          <div class="spotlight-frame" style="margin-bottom: 24px; max-height: 440px; overflow: hidden; border-radius: var(--radius-sm);">
+            <img src="assets/morning_briefing.jpg" alt="Antromat Executive Morning Briefing" class="frame-canvas" style="width: 100%; height: 440px; object-fit: cover;">
+            <div class="spotlight-reveal-layer" style="background-image: url('assets/morning_briefing.jpg'); background-size: cover; background-position: center;"></div>
+          </div>
+
+          <div class="newspaper-columns">
+            <div class="news-lead-col">
+              <span class="badge-blue" style="padding:2px 6px; font-size:9px;">HIGHEST PRIORITY</span>
+              <h3 class="news-lead-headline" style="margin-top:8px;">
+                Three key dispatches scheduled; one quotation awaiting founder sign-off.
+              </h3>
+              <p style="font-size:13px; color:var(--text-stone); line-height:1.6;">
+                Operations closed yesterday with 94.2% loom efficiency. Fabric dispatch for RK Garments completed at 2:34 PM. Cash collection of ₹3.42L registered in Tally ledger.
+              </p>
+              <div class="news-priority-lead">
+                ★ <strong>Action item for today:</strong> Mahesh Textiles has confirmed payment arrival on Friday. Follow up before 11:00 AM to authorize the second fabric cut.
+              </div>
+            </div>
+
+            <div>
+              <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase;">REVENUE & LIQUIDITY</span>
+              <div style="margin-top:12px; display:flex; flex-direction:column; gap:12px;">
+                <div>
+                  <div style="font-family:var(--font-mono); font-size:1.35rem; color:var(--text-warm-white);">₹ 42,80,000</div>
+                  <div style="font-size:11px; color:var(--text-muted);">September Bookings</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-mono); font-size:1.35rem; color:#38b27d;">₹ 3,42,000</div>
+                  <div style="font-size:11px; color:var(--text-muted);">Collected Yesterday</div>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-mono); font-size:1.35rem; color:var(--text-warm-white);">₹ 1,82,400</div>
+                  <div style="font-size:11px; color:var(--text-muted);">Due This Week</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span style="font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase;">OPERATIONS & LOGISTICS</span>
+              <div style="margin-top:12px; font-family:var(--font-mono); font-size:12px; display:flex; flex-direction:column; gap:10px; color:var(--text-stone);">
+                <div style="border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>Loom 01–04:</span> <span style="color:#38b27d;">Normal</span>
+                </div>
+                <div style="border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>Yarn Inventory:</span> <span>18 Days Left</span>
+                </div>
+                <div style="border-bottom:1px solid var(--border-dark-subtle); padding-bottom:6px;">
+                  <span>Transport Vehicle:</span> <span>On Route</span>
+                </div>
+                <div>
+                  <span>Pending Callbacks:</span> <span>2 Clients</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">MORNING BRIEFING — 08:00 AM</span>
+          <span class="caption-time">Automatically generated from yesterday's business activity. Zero meetings needed.</span>
+        </figcaption>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 08 — BUILT FOR REAL BUSINESS WORKFLOWS (5 INDUSTRIES)
+         ==================================================================== -->
+    <article class="editorial-article" id="article-workflows" data-article-num="08" data-article-title="WORKFLOWS">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 08</span>
+          <span class="article-tag">INDIAN ENTERPRISE</span>
+        </header>
+
+        <h2 class="article-headline">
+          Built for real business workflows.
+        </h2>
+
+        <p class="article-paragraph">
+          From Vidarbha textile mills to Surat garment units and Thane chemical warehouses — Antromat speaks the operational language of Indian industry.
+        </p>
+
+        <!-- 5 Industry Tabs -->
+        <div class="workflows-tabs-nav">
+          <button class="workflow-tab-btn active" data-workflow="garment">Garment Manufacturing</button>
+          <button class="workflow-tab-btn" data-workflow="textile">Textile Mills</button>
+          <button class="workflow-tab-btn" data-workflow="warehouse">Warehousing & Logistics</button>
+          <button class="workflow-tab-btn" data-workflow="chemical">Chemical Processing</button>
+          <button class="workflow-tab-btn" data-workflow="distribution">Wholesale Distribution</button>
+        </div>
+
+        <!-- Dynamic Workflow Stage -->
+        <div class="workflow-display-stage">
+          <div class="workflow-photo-box spotlight-frame" style="position: relative; overflow: hidden; min-height: 420px; border-radius: var(--radius-md);">
+            <img id="workflow-photo-img" src="assets/garment_floor.jpg" alt="Industry Workflow Documentary" class="frame-canvas" style="width: 100%; height: 420px; object-fit: cover;">
+            <div class="spotlight-reveal-layer" id="workflow-photo-reveal" style="background-image: url('assets/garment_floor.jpg'); background-size: cover; background-position: center;"></div>
+            <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 24px; background: linear-gradient(to top, rgba(9,9,9,0.95) 0%, rgba(9,9,9,0.7) 60%, transparent 100%); z-index: 2;">
+              <span class="badge-blue" id="workflow-meta" style="font-size:10px; padding:3px 8px;">GARMENT UNIT · CUTTING FLOOR</span>
+              <h3 id="workflow-headline" style="font-family:var(--font-serif); font-size:1.6rem; color:var(--text-warm-white); margin-top:10px; line-height:1.2;">
+                Every production update becomes memory.
+              </h3>
+              <p id="workflow-copy" style="font-size:12px; color:var(--text-stone); line-height:1.5; margin-top:6px; max-width:480px;">
+                Workers upload updates on the floor. Production moves through cutting, stitching, and finishing stages. Owners don't chase status anymore.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-dashboard-box">
+            <div class="panel-title">
+              <span id="workflow-status-badge">STAGE 03 / 05 · STITCHING IN PROGRESS</span>
+              <span style="color:#38b27d;">SYNCED</span>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:13px; line-height:1.8; color:var(--text-stone); margin:16px 0;">
+              <div>• Shift Supervisor: Ramesh Patil (Floor A)</div>
+              <div>• Target: 500 Finished Units by 05:00 PM</div>
+              <div>• Current Progress: 380 Inspected</div>
+              <div style="color:var(--focus-amber); margin-top:8px;" id="workflow-highlight-text">
+                ★ Cutting & Stitching synced · 420 units on schedule
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); border-top:1px solid var(--border-dark-subtle); padding-top:10px;">
+              Input source: WhatsApp voice note + 2 quality checkpoint photos.
+            </div>
+          </div>
+        </div>
+
+        <figure class="editorial-pullquote">
+          <q>"One workflow. One memory. One operating system."</q>
+          <span class="quote-attribution">Antromat Workflow Architecture</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- Perforated Paper Deckle Transition into Ivory Issue Insert -->
+    <div class="paper-deckle-edge"></div>
+
+    <!-- ====================================================================
+         ARTICLE 09 — BUSINESS MEMORY IN ACTION (IVORY PAPER THEME)
+         ==================================================================== -->
+    <article class="editorial-article theme-ivory" id="article-action" data-article-num="09" data-article-title="MEMORY IN ACTION">
+      <div class="editorial-container">
+        <!-- Running Folio Header on Ivory Paper -->
+        <div class="editorial-running-folio" style="border-bottom-color: var(--border-ivory); color: #72726C;">
+          <span>CHAPTER III — THE CONTEXT GRAPH</span>
+          <span>SPECIAL IVORY FOLIO</span>
+          <span>ISSUE 01</span>
+        </div>
+
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 09</span>
+          <span class="article-tag">CONTEXTUAL GRAPH</span>
+        </header>
+
+        <h2 class="article-headline">
+          Everything is connected.
+        </h2>
+
+        <p class="article-paragraph drop-cap">
+          Conversations become customers. Customers become orders. Orders become invoices. Invoices become payments. Everything becomes context.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin:var(--space-48) 0;">
+          <div style="background:#fff; border:1px solid var(--border-ivory); border-radius:var(--radius-sm); padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:10px; color:#72726C; text-transform:uppercase;">01 · ORIGIN</div>
+            <div style="font-family:var(--font-serif); font-size:1.25rem; font-weight:500; margin:8px 0; color:#121212;">WhatsApp Conversation</div>
+            <p style="font-size:13px; color:#555; line-height:1.5;">Client asks for price list and delivery turnaround.</p>
+          </div>
+
+          <div style="background:#fff; border:1px solid var(--border-ivory); border-radius:var(--radius-sm); padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:10px; color:#72726C; text-transform:uppercase;">02 · COMMITMENT</div>
+            <div style="font-family:var(--font-serif); font-size:1.25rem; font-weight:500; margin:8px 0; color:#121212;">Quotation & Challan</div>
+            <p style="font-size:13px; color:#555; line-height:1.5;">Antromat records exact prices, discounts, and dispatch date.</p>
+          </div>
+
+          <div style="background:#fff; border:1px solid var(--border-ivory); border-radius:var(--radius-sm); padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:10px; color:#72726C; text-transform:uppercase;">03 · SETTLEMENT</div>
+            <div style="font-family:var(--font-serif); font-size:1.25rem; font-weight:500; margin:8px 0; color:#121212;">Invoice & Memory Ledger</div>
+            <p style="font-size:13px; color:#555; line-height:1.5;">Tied back to customer history for seamless future re-ordering.</p>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">BUSINESS MEMORY — CUSTOMER HISTORY</span>
+          <span class="caption-time">Nothing exists in isolation. Everything belongs to a story.</span>
+        </figcaption>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 10 — WORKS WITH YOUR EXISTING BUSINESS
+         ==================================================================== -->
+    <article class="editorial-article" id="article-tools" data-article-num="10" data-article-title="INTEGRATIONS">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 10</span>
+          <span class="article-tag">ZERO MIGRATION</span>
+        </header>
+
+        <h2 class="article-headline">
+          Works with the tools<br>your business already uses.
+        </h2>
+
+        <p class="article-paragraph">
+          You don't need to change how your team communicates or force workers to learn complex software. Antromat listens to your existing tools.
+        </p>
+
+        <!-- Monochrome Icon Wall with Hover Color Reveal -->
+        <div class="icon-wall-grid">
+          <div class="icon-wall-category">
+            <div class="icon-category-title">COMMUNICATION</div>
+            <div class="icon-list-row">
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>WhatsApp Business</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <span>Telegram Groups</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email & Outlook</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="icon-wall-category">
+            <div class="icon-category-title">DOCUMENTS & SPREADSHEETS</div>
+            <div class="icon-list-row">
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>PDF Invoices & Quotations</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                <span>Microsoft Excel / Sheets</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                <span>Google Drive / OneDrive</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="icon-wall-category">
+            <div class="icon-category-title">FINANCE & TAX</div>
+            <div class="icon-list-row">
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Tally Prime & ERP 9</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span>GST Portal Exports</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                <span>Bank Statement OCR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="icon-wall-category">
+            <div class="icon-category-title">BUSINESS SYSTEMS</div>
+            <div class="icon-list-row">
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>Custom Legacy ERPs</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Zoho / Salesforce</span>
+              </div>
+              <div class="tool-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                <span>Warehouse Barcode Scans</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">CONNECTED SOURCES</span>
+          <span class="caption-time">Business activity flows into one memory. No forced migration.</span>
+        </figcaption>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 11 — WHY ANTROMAT (OUTCOMES)
+         ==================================================================== -->
+    <article class="editorial-article" id="article-why" data-article-num="11" data-article-title="WHY ANTROMAT">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 11</span>
+          <span class="article-tag">PROVEN OUTCOMES</span>
+        </header>
+
+        <h2 class="article-headline">
+          Build institutional memory.
+        </h2>
+
+        <p class="article-paragraph">
+          Replacing scattered chats and fragile memory with structured intelligence. Here is what changes on day one.
+        </p>
+
+        <div class="outcomes-grid">
+          <div class="outcome-card">
+            <span class="outcome-num">01 / OUTCOME</span>
+            <h3 class="outcome-title">Never lose another lead.</h3>
+            <p class="outcome-desc">
+              Every enquiry gets remembered. Every follow-up gets tracked without manual data entry.
+            </p>
+          </div>
+
+          <div class="outcome-card">
+            <span class="outcome-num">02 / OUTCOME</span>
+            <h3 class="outcome-title">Know what needs attention.</h3>
+            <p class="outcome-desc">
+              Your day starts with crisp priorities, not fifty notifications across ten chat groups.
+            </p>
+          </div>
+
+          <div class="outcome-card">
+            <span class="outcome-num">03 / OUTCOME</span>
+            <h3 class="outcome-title">Build institutional memory.</h3>
+            <p class="outcome-desc">
+              Knowledge belongs to your company, not inside the heads of individual employees who may leave.
+            </p>
+          </div>
+
+          <div class="outcome-card">
+            <span class="outcome-num">04 / OUTCOME</span>
+            <h3 class="outcome-title">Stop chasing payments manually.</h3>
+            <p class="outcome-desc">
+              Outstanding invoices and overdue aging become visible automatically with polite AI reminder drafts.
+            </p>
+          </div>
+
+          <div class="outcome-card">
+            <span class="outcome-num">05 / OUTCOME</span>
+            <h3 class="outcome-title">Understand operations instantly.</h3>
+            <p class="outcome-desc">
+              Production, loom updates, inventory alerts, and dispatches in one unified daily picture.
+            </p>
+          </div>
+
+          <div class="outcome-card">
+            <span class="outcome-num">06 / OUTCOME</span>
+            <h3 class="outcome-title">Scale without chaos.</h3>
+            <p class="outcome-desc">
+              Every new teammate enters an operating environment that already remembers every customer and workflow.
+            </p>
+          </div>
+        </div>
+
+        <figure class="editorial-pullquote">
+          <q>"Good businesses collect information. Great businesses remember it."</q>
+          <span class="quote-attribution">Antromat Issue 01</span>
+        </figure>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 12 — PRICING
+         ==================================================================== -->
+    <article class="editorial-article" id="article-pricing" data-article-num="12" data-article-title="PRICING">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 12</span>
+          <span class="article-tag">TRANSPARENT PLANS</span>
+        </header>
+
+        <h2 class="article-headline">
+          Choose the operating system<br>your business needs.
+        </h2>
+
+        <p class="article-paragraph">
+          Simple plans. No hidden complexity. Everything scales with your business memory.
+        </p>
+
+        <div class="pricing-editorial-grid">
+          <!-- Starter Plan -->
+          <div class="pricing-plan-card">
+            <div>
+              <span class="plan-tier-name">STARTER</span>
+              <h3 class="plan-headline">For early businesses</h3>
+              <p class="plan-description">Building structured operations and centralized customer conversation memory.</p>
+              
+              <ul class="plan-features-list">
+                <li>Up to 5 Team Operators</li>
+                <li>WhatsApp & Email Integration</li>
+                <li>Core Business Memory Engine</li>
+                <li>Daily Morning Briefing</li>
+                <li>Searchable Quotation History</li>
+              </ul>
+            </div>
+            
+            <button class="btn-editorial-outline" data-open-demo>Request Starter Access</button>
+          </div>
+
+          <!-- Growth Plan (Highlighted Border) -->
+          <div class="pricing-plan-card highlight-growth">
+            <div>
+              <span class="plan-tier-name" style="color:var(--text-warm-white);">GROWTH</span>
+              <h3 class="plan-headline">For operating teams</h3>
+              <p class="plan-description">Running sales, factory operations, and Tally finance together under one living memory.</p>
+
+              <ul class="plan-features-list">
+                <li>Up to 25 Team Operators</li>
+                <li>Unlimited Chat & Voice Notes</li>
+                <li>Tally / GST Ledger Integration</li>
+                <li>Production Stage Tracking</li>
+                <li>Overdue Aging & AI Follow-up Drafts</li>
+                <li>Dedicated Customer Success Manager</li>
+              </ul>
+            </div>
+
+            <button class="btn-editorial-primary" data-open-demo>Book Growth Demo</button>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="pricing-plan-card">
+            <div>
+              <span class="plan-tier-name">ENTERPRISE</span>
+              <h3 class="plan-headline">Custom deployment</h3>
+              <p class="plan-description">For large manufacturers, mills, and multi-unit distribution networks.</p>
+
+              <ul class="plan-features-list">
+                <li>Unlimited Operators & Units</li>
+                <li>On-Premise / Private Cloud Setup</li>
+                <li>Custom Legacy ERP Connectors</li>
+                <li>Air-Gapped Privacy Options</li>
+                <li>Executive Founder Onboarding</li>
+              </ul>
+            </div>
+
+            <button class="btn-editorial-outline" data-open-demo>Talk to Founder</button>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">PLANS GROW WITH YOUR BUSINESS MEMORY</span>
+          <span class="caption-time">No user seat penalties. Priced for long-term partnership.</span>
+        </figcaption>
+      </div>
+    </article>
+
+
+    <!-- ====================================================================
+         ARTICLE 13 — FINAL CALL TO ACTION & FOUNDER NOTE
+         ==================================================================== -->
+    <article class="editorial-article" id="article-cta" data-article-num="13" data-article-title="FINAL BRIEFING">
+      <div class="editorial-container">
+        <header class="article-label-meta">
+          <span class="article-num">ARTICLE 13</span>
+          <span class="article-tag">FINAL ISSUE CONCLUSION</span>
+        </header>
+
+        <div class="cta-spread-wrap">
+          <!-- Founder Portrait Frame -->
+          <div class="founder-portrait-frame spotlight-frame">
+            <img src="founder.jpg" alt="Founder of Antromat" class="frame-canvas">
+            <div style="padding:16px; background:#141414; border-top:1px solid var(--border-dark); font-family:var(--font-mono); font-size:11px; color:var(--text-muted); display:flex; justify-content:space-between;">
+              <span>SOHAM GAUL · FOUNDER</span>
+              <span>WARDHA, MAHARASHTRA</span>
+            </div>
+          </div>
+
+          <!-- Final Call to Action Column -->
+          <div class="cta-content-col">
+            <h2 class="cta-headline">
+              Stop managing information.<br>
+              Start managing your business.
+            </h2>
+
+            <p class="article-paragraph">
+              Antromat becomes the memory layer behind your company — helping sales, operations and finance move together with quiet confidence.
+            </p>
+
+            <div class="cta-button-group">
+              <button class="btn-editorial-primary" data-open-demo style="padding:14px 32px;">Book a Live Demo</button>
+              <a href="pitch.html" class="btn-editorial-outline" style="padding:14px 28px;">View EIR Pitch Deck ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="editorial-caption">
+          <span class="caption-context">ISSUE 01 — COMPLETE</span>
+          <span class="caption-time">The AI Chief of Staff · Antromat Journal Edition 2026.</span>
+        </figcaption>
+      </div>
+    </article>
+  </main>
+
+
+  <!-- ====================================================================
+       EDITORIAL FOOTER
+       ==================================================================== -->
+  <footer class="editorial-footer">
+    <div class="editorial-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="footer-title">ANTROMAT</div>
+          <div class="footer-tagline">The AI Chief of Staff for real businesses.</div>
+          <p style="font-family:var(--font-sans); font-size:13px; color:var(--text-muted); max-width:380px; line-height:1.6;">
+            Antromat understands conversations, operations, payments and documents — creating a living memory of your company.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">ISSUE 01 INDEX</div>
+          <ul class="footer-nav-list">
+            <li><a href="#article-cover">00 Cover</a></li>
+            <li><a href="#article-reality">01 Reality</a></li>
+            <li><a href="#article-memory">02 Memory</a></li>
+            <li><a href="#article-sales">03 Sales</a></li>
+            <li><a href="#article-operations">04 Operations</a></li>
+            <li><a href="#article-finance">05 Finance</a></li>
+            <li><a href="#article-ask">06 Ask Antromat</a></li>
+            <li><a href="#article-workflows">08 Workflows</a></li>
+            <li><a href="#article-pricing">12 Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">CONTACT & ORIGIN</div>
+          <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-stone); line-height:1.8;">
+            <div>Founder: Soham Gaul</div>
+            <div>Inquiries: <a href="mailto:sohamgaul@gmail.com" style="color:var(--text-warm-white); text-decoration:none;">sohamgaul@gmail.com</a></div>
+            <div style="margin-top:12px; color:var(--text-muted);">Built in Wardha, Vidarbha, Maharashtra, India.</div>
           </div>
         </div>
       </div>
 
-      <!-- ===================================================================
-           SECTION 09 — THE PRODUCT: BESPOKE EXECUTIVE CRM APPLIANCE
-           =================================================================== -->
-      <section class="manual-section" id="section-playground">
-        <div class="section-label-row">
-          <span>SECTION 09 / 11 · THE PRODUCT SYSTEM</span>
-          <span class="num">09</span>
+      <div class="footer-bottom-bar">
+        <span>END OF ISSUE 01 · SEPTEMBER 2026 EDITION</span>
+        <span>© 2026 ANTROMAT INC. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ====================================================================
+       EDITORIAL DEMO BOOKING MODAL DIALOG
+       ==================================================================== -->
+  <div class="editorial-modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="editorial-modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">✕</button>
+      
+      <div class="modal-header-tag">ANTROMAT BRIEFING RESERVATION</div>
+      <h3 class="modal-headline" id="modal-title">Book a Private Demo</h3>
+      <p class="modal-subhead">Experience Issue 01 with a personalized walkthrough of your company's workflows.</p>
+
+      <form class="editorial-form" id="editorial-demo-form">
+        <div class="form-group">
+          <label for="demo-name">Your Name</label>
+          <input type="text" id="demo-name" required placeholder="e.g. Rajesh Sharma">
         </div>
 
-        <h2 class="section-title">THE DELIVERABLE: BESPOKE EXECUTIVE CRM</h2>
-        <p class="section-subtitle">
-          This is the standalone operating system deployed for your enterprise. Zero monthly SaaS fees, 100% custom-tailored to your workflow.
-        </p>
-
-        <!-- Product Appliance Hardware & OS Window Chassis -->
-        <div class="product-showcase-wrapper">
-          <!-- OS Window Title Bar -->
-          <div class="product-os-window-header">
-            <div class="product-window-controls">
-              <div class="product-window-dots">
-                <div class="product-window-dot red"></div>
-                <div class="product-window-dot yellow"></div>
-                <div class="product-window-dot green"></div>
-              </div>
-              <div class="product-window-title">
-                <span>ANTROMAT OS v3.0</span>
-                <span style="color:#777;">—</span>
-                <span style="color:#fff;">EXECUTIVE COMMAND CENTER (LIVE CLIENT BUILD)</span>
-              </div>
-            </div>
-            <div style="display:flex; align-items:center; gap:10px;">
-              <span class="product-window-badge">DELIVERABLE PRODUCT</span>
-              <span style="color:#888; font-size:10px;">256-BIT ENCRYPTED</span>
-            </div>
-          </div>
-
-          <!-- Product Inner Workspace -->
-          <div class="product-inner-screen">
-            <div class="sandbox-tab-bar">
-              <div class="sandbox-tabs-group">
-                <button class="sandbox-action-btn active-step" id="sb-btn-open-lead">01 CLIENT DOSSIER</button>
-                <button class="sandbox-action-btn" id="sb-btn-gen-invoice">02 GENERATE GST INVOICE</button>
-                <button class="sandbox-action-btn" id="sb-btn-schedule">03 SYNC GOOGLE CALENDAR</button>
-                <button class="sandbox-action-btn" id="sb-btn-mark-paid">04 BANK RECONCILIATION</button>
-              </div>
-              <div style="font-family:var(--font-mono); font-size:10px; color:var(--neutral-grey);">
-                ● LIVE OPERATING SYSTEM RUNTIME
-              </div>
-            </div>
-
-            <div class="sandbox-screens-grid">
-              <!-- Left Console: State Machine -->
-              <div class="sandbox-panel-box">
-                <div class="title">
-                  <span>ACTIVE PIPELINE DOSSIER</span>
-                  <span style="color:var(--success); font-size:10px;">CRM SYNCHRONIZED ✓</span>
-                </div>
-                <div id="sandbox-dynamic-state">
-                  <!-- Dynamically populated via app.js -->
-                </div>
-                <div style="font-size:10px; color:var(--neutral-grey); border-top:1px solid #eee; padding-top:6px; margin-top:6px;">
-                  CONNECTED: WhatsApp Cloud API + Antromat PostgreSQL
-                </div>
-              </div>
-
-              <!-- Right Console: Tax Invoice & Payment Status -->
-              <div class="sandbox-panel-box invoice-container">
-                <div class="title">
-                  <span>OFFICIAL TAX INVOICE PREVIEW</span>
-                  <span>GSTIN: 27AABCA1234F1Z5</span>
-                </div>
-                <div class="paid-stamp-badge" id="sandbox-paid-stamp">PAID</div>
-                <div style="font-size:11px; line-height:1.5; color:#333;" id="sandbox-invoice-content">
-                  <div><strong>ANTROMAT AUTOMATED TAX INVOICE #INV-00234</strong></div>
-                  <div>BILLED TO: Amit Constructions (Yavatmal MIDC)</div>
-                  <div>HSN/SAC: 252329 · 500 Bags OPC 43 Cement @ ₹420/bag</div>
-                  <div style="margin-top:4px;">SUBTOTAL: ₹ 2,10,000.00</div>
-                  <div>GST (18%): ₹ 37,800.00</div>
-                  <div style="font-weight:700; font-size:13px; margin-top:6px; border-top:1px solid #ddd; padding-top:4px; color:var(--black);">
-                    TOTAL PAYABLE: ₹ 2,47,800.00
-                  </div>
-                </div>
-                <div style="font-size:10px; color:var(--neutral-grey); border-top:1px solid #eee; padding-top:6px; margin-top:6px;">
-                  STATUS: AUTO-RECONCILED VIA BANK WEBHOOK
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product Chassis Bottom Bar -->
-          <div class="product-bottom-banner">
-            <span>PROPRIETARY CLIENT DEPLOYMENT · OWNED OUTRIGHT BY YOUR BUSINESS</span>
-            <span style="color:var(--yellow); font-weight:700;">BUILT & DELIVERED IN 14 DAYS →</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 10 — REAL MAHARASHTRA & VIDARBHA MAP (GEOGRAPHIC ACCURACY)
-           =================================================================== -->
-      <section class="manual-section" id="section-vidarbha">
-        <div class="section-label-row">
-          <span>SECTION 10 / 11 · INDUSTRIAL ROOTS</span>
-          <span class="num">10</span>
+        <div class="form-group">
+          <label for="demo-company">Company Name & Industry</label>
+          <input type="text" id="demo-company" required placeholder="e.g. Vidarbha Cotton Mills">
         </div>
 
-        <div class="vidarbha-grid">
-          <div class="vidarbha-narrative">
-            <h2>BUILT IN VIDARBHA. ENGINEERED FOR REAL WORK.</h2>
-            <p>
-              We didn’t build Antromat in a Silicon Valley bubble. We built it on the shop floors, construction sites, and trading desks of <strong>Wardha</strong>, <strong>Nagpur</strong>, and <strong>Yavatmal</strong>.
-            </p>
-            <p>
-              Indian SMEs run on WhatsApp, trust, and speed. Antromat provides the automated digital spine so business owners stop firefighting and start scaling.
-            </p>
-
-            <div class="vidarbha-hub-tags">
-              <div class="hub-tag">📍 WARDHA HQ</div>
-              <div class="hub-tag">📍 NAGPUR HUB</div>
-              <div class="hub-tag">📍 YAVATMAL CORRIDOR</div>
-            </div>
-          </div>
-
-          <!-- Authentic Maharashtra Reference Map with Interactive Pin Overlays -->
-          <div class="vidarbha-map-chassis">
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:10px; font-weight:700;">
-              <span>MAHARASHTRA REGIONAL MAP</span>
-              <span style="background:var(--yellow); padding:1px 6px; border:1px solid var(--black);">VIDARBHA REGION HIGHLIGHTED</span>
-            </div>
-            
-            <div class="real-map-container">
-              <img src="maharashtra-political-map-region-wise-vector.jpg" alt="Official Maharashtra Regional Map with Vidarbha" class="real-map-img">
-              
-              <!-- Interactive Location Pins on Vidarbha (Yellow Zone) -->
-              <!-- Nagpur Pin -->
-              <div class="map-pin-overlay map-location-dot" style="left: 74%; top: 28%;" data-city="Nagpur" data-desc="Commercial & Logistics Epicenter · Heavy industrial trading and rapid business dispatch.">
-                <div class="map-pin-dot"></div>
-                <div class="map-pin-label">NAGPUR</div>
-              </div>
-
-              <!-- Wardha Pin -->
-              <div class="map-pin-overlay map-location-dot" style="left: 67%; top: 38%;" data-city="Wardha" data-desc="Design & Founder Engineering Headquarters · Centralized system architecture and automation command center.">
-                <div class="map-pin-dot"></div>
-                <div class="map-pin-label">WARDHA HQ</div>
-              </div>
-
-              <!-- Yavatmal Pin -->
-              <div class="map-pin-overlay map-location-dot" style="left: 61%; top: 46%;" data-city="Yavatmal" data-desc="Core Industrial & Agricultural SME Corridor · High-volume manufacturing, raw materials, and enterprise network.">
-                <div class="map-pin-dot"></div>
-                <div class="map-pin-label">YAVATMAL</div>
-              </div>
-            </div>
-
-            <div id="map-city-info" style="font-size:11px; margin-top:10px; padding:8px 10px; background:#EDEAE1; border:1px solid var(--black); color:var(--black); min-height:36px; line-height:1.4;">
-              <strong>CLICK OR HOVER:</strong> Wardha HQ, Nagpur, or Yavatmal pins above to inspect operational deployments.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================================================================
-           SECTION 11 — DEPLOYMENT / COMMISSIONING
-           =================================================================== -->
-      <section class="manual-section" id="section-deployment">
-        <div class="section-label-row">
-          <span>SECTION 11 / 11 · COMMISSIONING CONSOLE</span>
-          <span class="num">11</span>
+        <div class="form-group">
+          <label for="demo-contact">WhatsApp Number or Email</label>
+          <input type="text" id="demo-contact" required placeholder="+91 98230 ... or email">
         </div>
 
-        <div class="deployment-grid">
-          <div class="deployment-editorial">
-            <h2>COMMISSION YOUR OPERATING SYSTEM.</h2>
-            <p style="font-size:15px; line-height:1.6; color:#333; margin-bottom:16px;">
-              Ready to eliminate operational bottlenecks? We build, test, and commission bespoke business operating systems within 14 days.
-            </p>
-
-            <!-- Prominent Seamless Workflow Integration Banner -->
-            <div class="seamless-workflow-callout">
-              <div class="seamless-callout-header">
-                <span>SEAMLESS WORKFLOW INTEGRATION</span>
-                <span class="highlight-tag">NO RETRAINING</span>
-              </div>
-              
-              <div class="seamless-points-list">
-                <div class="seamless-point-item">
-                  <div class="bullet">✓</div>
-                  <div>
-                    <strong>No Employee Training Required</strong>: Your staff never has to adopt complicated new software. They continue using their everyday tools: <strong>WhatsApp, Tally, Google Sheets, and Gmail</strong>.
-                  </div>
-                </div>
-
-                <div class="seamless-point-item">
-                  <div class="bullet">✓</div>
-                  <div>
-                    <strong>Invisible Background Integration</strong>: Antromat operates invisibly behind your existing systems, extracting parameters and updating records automatically.
-                  </div>
-                </div>
-
-                <div class="seamless-point-item">
-                  <div class="bullet">✓</div>
-                  <div>
-                    <strong>Zero Habit Friction</strong>: Site supervisors, sales reps, and drivers keep their current habits while founders gain 100% live operational visibility.
-                  </div>
-                </div>
-
-                <div class="seamless-point-item">
-                  <div class="bullet">✓</div>
-                  <div>
-                    <strong>Turnkey Commissioning</strong>: Fully deployed, configured, and operational within <strong>14 days</strong>.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Commission Intake Form -->
-          <div class="deployment-form-card">
-            <form class="commission-form" id="commission-deployment-form">
-              <div class="form-field-group">
-                <label>YOUR NAME / DESIGNATION</label>
-                <input type="text" name="name" placeholder="e.g. Rahul Patil, Managing Director" required>
-              </div>
-
-              <div class="form-field-group">
-                <label>BUSINESS / COMPANY NAME</label>
-                <input type="text" name="company" placeholder="e.g. Patil Infrastructure Pvt Ltd" required>
-              </div>
-
-              <div class="form-field-group">
-                <label>WHATSAPP NUMBER</label>
-                <input type="tel" name="phone" placeholder="+91 98XXX XXXXX" required>
-              </div>
-
-              <div class="form-field-group">
-                <label>PRIMARY INDUSTRY</label>
-                <select name="industry">
-                  <option value="builder">Construction & Real Estate</option>
-                  <option value="hospital">Hospital & Diagnostics</option>
-                  <option value="factory">Manufacturing & Factory</option>
-                  <option value="warehouse">Warehousing & Logistics</option>
-                  <option value="other">Other High-Volume Business</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn-mechanical dark" style="margin-top:12px;">
-                <span>INITIATE SYSTEM COMMISSION</span>
-                <span class="arrow">→</span>
-              </button>
-            </form>
-          </div>
+        <div class="form-group">
+          <label for="demo-priority">Primary Operational Focus</label>
+          <select id="demo-priority">
+            <option value="sales">Sales & Follow-up Tracking</option>
+            <option value="operations">Factory Floor & Production Tracking</option>
+            <option value="finance">Overdue Invoices & Payment Chasing</option>
+            <option value="all">Full Business Memory (All Three)</option>
+          </select>
         </div>
 
-        <!-- End of Manual Colophon -->
-        <div class="end-of-manual-colophon" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <img src="logo.png" alt="Antromat Logo" style="height:36px; width:auto;">
-            <span style="font-weight:700;">OPERATIONS MANUAL</span>
-          </div>
-          <span>END OF SPECIFICATION</span>
-          <span>MADE WITH PRECISION IN VIDARBHA · MAHARASHTRA</span>
-        </div>
-      </section>
-
-      <!-- Persistent Page Footer Frame -->
-      <footer class="manual-footer-frame">
-        <div>ANTROMAT OPERATIONS MANUAL</div>
-        <div class="footer-progress-bar">
-          <div class="footer-progress-fill"></div>
-        </div>
-        <div class="footer-page-label">PAGE 01 / 11</div>
-      </footer>
-
-    </main>
+        <button type="submit" class="btn-editorial-primary" style="width:100%; padding:14px; margin-top:10px;">
+          CONFIRM DEMO RESERVATION
+        </button>
+      </form>
+    </div>
   </div>
 
+  <!-- Scripts -->
   <script src="js/app.js"></script>
 </body>
 </html>
