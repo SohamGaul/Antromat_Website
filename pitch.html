@@ -3,1128 +3,1209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANTROMAT — MeitY GENESIS 3.0 Pitch Deck</title>
-  <meta name="description" content="Antromat — AI Operations Platform for Indian MSMEs. Official Pitch Deck for MeitY GENESIS 3.0 Cohort.">
+  <title>ANTROMAT — Investor Pitch Deck v2 (The AI Chief of Staff)</title>
+  <meta name="description" content="Official Investor Pitch Deck for Antromat: The AI Chief of Staff & Business Memory for Indian Businesses.">
+  
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="styles/pitch.css">
 </head>
 <body>
 
-  <!-- Continuous 16:9 Slides Wrapper -->
-  <main class="deck-scroll-wrapper">
-
-    <!-- ===================================================================
-         SLIDE 01: COVER & EXECUTIVE SUMMARY
-         =================================================================== -->
-    <article class="slide-page" id="slide-01">
-      <div class="slide-header">
-        <div class="header-tag">MEITY GENESIS 3.0 · PROPOSAL</div>
-        <div class="header-meta">SLIDE 01 / 16 · EXECUTIVE SUMMARY</div>
+  <!-- ===================================================================
+       STICKY PRESENTATION CONTROL BAR
+       =================================================================== -->
+  <header class="deck-top-nav">
+    <div class="deck-nav-inner">
+      <div class="nav-brand-group">
+        <a href="index.html" class="nav-brand-link" title="Return to Website">
+          <img src="logo.png" alt="Antromat" class="nav-brand-logo">
+          <span class="nav-brand-text">ANTROMAT</span>
+        </a>
+        <span class="nav-deck-badge">INVESTOR PITCH DECK V2</span>
       </div>
 
-      <div class="slide-body slide-01-layout">
-        <div class="s01-title-block">
-          <div class="s01-brand-row">
-            <img src="logo.png" alt="Antromat" class="s01-main-logo">
-            <span class="org-badge">GEN-NEXT SUPPORT FOR INNOVATIVE STARTUPS (GENESIS)</span>
-          </div>
-          <h2 class="sub-title">AI Operations Platform for Indian MSMEs</h2>
-          <p class="summary-paragraph">
-            Transforming unstructured, daily conversational chaos—WhatsApp audio notes, mixed Hinglish/Marathi chats, missed phone calls, and handwritten estimates—into automated, deterministic enterprise workflows across CRM, quote generation, GST billing, and payment follow-ups.
-          </p>
+      <div class="nav-controls">
+        <button class="nav-btn" id="deck-prev-btn" aria-label="Previous Slide">← PREV</button>
+        
+        <div class="slide-select-wrap">
+          <select class="slide-select" id="deck-slide-select" aria-label="Jump to slide">
+            <option value="slide-01">01 · Cover</option>
+            <option value="slide-02">02 · The Problem</option>
+            <option value="slide-03">03 · Why Now?</option>
+            <option value="slide-04">04 · The Solution</option>
+            <option value="slide-05">05 · Morning Briefing</option>
+            <option value="slide-06">06 · Ask Antromat</option>
+            <option value="slide-07">07 · The 4 Layers</option>
+            <option value="slide-08">08 · Workflows</option>
+            <option value="slide-09">09 · Initial ICP</option>
+            <option value="slide-10">10 · Market Opportunity</option>
+            <option value="slide-11">11 · Why Different</option>
+            <option value="slide-12">12 · Business Model</option>
+            <option value="slide-13">13 · Go To Market</option>
+            <option value="slide-14">14 · Roadmap</option>
+            <option value="slide-15">15 · Why Me</option>
+            <option value="slide-16">16 · The Ask</option>
+            <option value="slide-17">17 · Vision</option>
+          </select>
+          <span class="select-arrow">▼</span>
         </div>
 
-        <div class="summary-grid-3">
-          <div class="info-card">
-            <span class="card-label">CURRENT READINESS</span>
-            <div class="card-value">TRL 3 · Proof of Concept</div>
-            <p class="card-desc">Core NLP entity extraction and workflow orchestration logic built and tested against real-world SME customer discovery models.</p>
-          </div>
+        <button class="nav-btn" id="deck-next-btn" aria-label="Next Slide">NEXT →</button>
+        
+        <span class="nav-counter" id="deck-counter">SLIDE <strong>01</strong> / 17</span>
+        
+        <button class="nav-btn" id="deck-print-btn" title="Export as PDF / Print">PRINT / PDF</button>
+        <a href="index.html" class="nav-btn" style="border-color: var(--accent-amber); color: var(--accent-amber);">WEBSITE ↗</a>
+      </div>
+    </div>
+  </header>
 
-          <div class="info-card highlight-card">
-            <span class="card-label">TECHNOLOGY DOMAIN</span>
-            <div class="card-value">Applied AI & Workflow Orchestration</div>
-            <p class="card-desc">Domain-tuned Natural Language Processing for regional Indian business dialects and low-latency API automation daemons.</p>
-          </div>
+  <!-- ===================================================================
+       16:9 SLIDES CONTAINER
+       =================================================================== -->
+  <main class="deck-container">
 
-          <div class="info-card">
-            <span class="card-label">INCUBATION GOAL</span>
-            <div class="card-value">MeitY GENESIS 3.0 Cohort</div>
-            <p class="card-desc">Seeking deep startup mentorship, technical infrastructure support, and guided access to industrial enterprise pilots.</p>
-          </div>
+    <!-- =================================================================
+         SLIDE 01 — COVER
+         ================================================================= -->
+    <article class="slide-card" id="slide-01" data-slide-index="1">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">EXECUTIVE BRIEFING</span>
+        <span class="slide-index">SLIDE 01 / 17</span>
+      </div>
+
+      <div class="slide-main-content slide-cover-wrap">
+        <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; color:var(--text-muted); margin-bottom:16px; text-transform:uppercase;">
+          ANTROMAT PRESENTS
         </div>
+        <h1 class="slide-headline" style="font-size:clamp(2.8rem, 5vw, 4.4rem); margin-bottom:24px;">
+          Remember everything.<br>
+          Understand anything.<br>
+          <em>Miss nothing.</em>
+        </h1>
+        <p class="slide-subhead" style="font-size:1.35rem; color:var(--text-secondary);">
+          The AI Chief of Staff for Indian Businesses.
+        </p>
 
-        <div class="applicant-meta-row">
-          <div><strong>Founder:</strong> Soham Gaul (B.Tech AI & Data Science)</div>
-          <div><strong>Location:</strong> Wardha, Maharashtra (Vidarbha)</div>
-          <div><strong>Live Web Demo:</strong> <a href="https://antromat-website.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--text-primary); text-decoration:underline; font-weight:700;">antromat-website.vercel.app ↗</a></div>
+        <div class="cover-meta-grid">
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">FOUNDER</span>
+            <span class="cover-meta-val">Soham Gaul</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">HEADQUARTERS</span>
+            <span class="cover-meta-val">Wardha, Maharashtra</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">ROUND</span>
+            <span class="cover-meta-val">Pre-Seed / Angel (₹20L)</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">INQUIRIES</span>
+            <span class="cover-meta-val">sohamgaul@gmail.com</span>
+          </div>
         </div>
       </div>
 
-      <div class="slide-footer">
-        <span>Confidential · Submitted for MeitY GENESIS 3.0 Incubation Evaluation</span>
-        <span>Page 01</span>
+      <div class="slide-bottom-bar">
+        <span>Confidential · Investor Presentation</span>
+        <span>Antromat Enterprise Systems · 2026</span>
       </div>
     </article>
 
 
-    <!-- ===================================================================
-         SLIDE 02: THE GROUND REALITY & OPERATIONAL CHAOS
-         =================================================================== -->
-    <article class="slide-page" id="slide-02">
-      <div class="slide-header">
-        <div class="header-tag">GROUND REALITY</div>
-        <div class="header-meta">SLIDE 02 / 16 · THE OPERATIONAL CHAOS</div>
+    <!-- =================================================================
+         SLIDE 02 — THE PROBLEM
+         ================================================================= -->
+    <article class="slide-card" id="slide-02" data-slide-index="2">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag red">THE PROBLEM</span>
+        <span class="slide-index">SLIDE 02 / 17</span>
       </div>
 
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">How Indian Businesses Actually Operate Today</h2>
-          <p class="slide-sub-lead">Business operations in Tier-2 and Tier-3 India run on fragmented, messy communication channels with zero unified automation.</p>
-        </div>
-
-        <div class="chaos-visual-grid">
-          <!-- Item 1: WhatsApp Voice & Hinglish -->
-          <div class="chaos-card">
-            <div class="chaos-header">
-              <span class="chaos-tag yellow">UNSTRUCTURED CHAT & AUDIO</span>
-              <span class="chaos-channel">WhatsApp</span>
-            </div>
-            <div class="chaos-content-box">
-              <div class="mock-chat">
-                <div class="chat-bubble in">
-                  <span class="chat-sender">Customer (Audio · 0:14)</span>
-                  <div class="audio-wave">▶ ılılılllılıll <span>"Bhai 200 bag cement bhej dena rate 390 lagana..."</span></div>
-                </div>
-                <div class="chat-bubble in">
-                  <span class="chat-sender">Contractor</span>
-                  <p>"Kal subah site pe gadi bhej do urgently rate wahi purana."</p>
-                </div>
-              </div>
-            </div>
-            <p class="chaos-desc">Inquiries arrive as audio snippets, colloquial text, and unstructured requests with no formal order entry.</p>
-          </div>
-
-          <!-- Item 2: Missed Calls & Verbal Deals -->
-          <div class="chaos-card">
-            <div class="chaos-header">
-              <span class="chaos-tag red">UNRECORDED PROMISES</span>
-              <span class="chaos-channel">Phone Calls</span>
-            </div>
-            <div class="chaos-content-box">
-              <div class="mock-call-box">
-                <div class="call-row alert">
-                  <span>🔴 Missed Call: Sharma Builder (14:12 PM)</span>
-                </div>
-                <div class="call-row">
-                  <span>📞 4.5 Min Call: Verbal rate agreed, not noted in CRM</span>
-                </div>
-                <div class="call-row alert">
-                  <span>🔴 Missed Call: MIDC Transporter (16:30 PM)</span>
-                </div>
-              </div>
-            </div>
-            <p class="chaos-desc">Crucial pricing negotiations and dispatch deadlines remain locked in phone memory with zero audit trail.</p>
-          </div>
-
-          <!-- Item 3: Scribbled Notes & Photos -->
-          <div class="chaos-card">
-            <div class="chaos-header">
-              <span class="chaos-tag yellow">PHYSICAL SLIPS</span>
-              <span class="chaos-channel">Paper Registers</span>
-            </div>
-            <div class="chaos-content-box">
-              <div class="mock-paper-slip">
-                <div class="paper-title">Shop Counter Scribble #104</div>
-                <p>• 12mm TMT Bar - 4 Ton (Hingna Site)<br>• ACC Gold - 50 bags<br>• Advance Rec: ₹20,000 cash</p>
-                <div class="paper-stamp">Pending Entry in Tally</div>
-              </div>
-            </div>
-            <p class="chaos-desc">Dispatch counter ledgers and loose slips pile up, leading to manual transcription delays and billing errors.</p>
-          </div>
-
-          <!-- Item 4: Broken Spreadsheets -->
-          <div class="chaos-card">
-            <div class="chaos-header">
-              <span class="chaos-tag">DISCONNECTED RECORDS</span>
-              <span class="chaos-channel">Spreadsheets</span>
-            </div>
-            <div class="chaos-content-box">
-              <div class="mock-excel-table">
-                <div class="excel-row header"><span>Date</span><span>Party</span><span>Amt</span><span>Status</span></div>
-                <div class="excel-row"><span>12/02</span><span>Rajesh Const</span><span>2.1L</span><span class="red-txt">Unfollowed</span></div>
-                <div class="excel-row"><span>14/02</span><span>Kothari Steels</span><span>85k</span><span>Pending Quote</span></div>
-              </div>
-            </div>
-            <p class="chaos-desc">Excel sheets updated days late with broken formulas, outdated stock balances, and forgotten receivables.</p>
-          </div>
-        </div>
-
-        <div class="insight-banner">
-          <strong>The Core Reality:</strong> Indian SME owners and their clients will <em>never</em> adopt complex desktop CRM dashboards. Automation must work directly on top of their existing, messy communication channels.
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span class="source-cite"><strong>References:</strong> Field interviews with 50+ regional business owners in Wardha, Nagpur & Butibori (2025–26); Bain & Google Report: <em>"Unlocking Digital for Bharat MSMEs"</em>.</span>
-        <span>Page 02</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 03: ECONOMIC IMPACT & REVENUE LEAKAGE
-         =================================================================== -->
-    <article class="slide-page" id="slide-03">
-      <div class="slide-header">
-        <div class="header-tag">ECONOMIC IMPACT</div>
-        <div class="header-meta">SLIDE 03 / 16 · QUANTIFYING REVENUE LEAKAGE</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Quantifying the True Cost of Human Operational Latency</h2>
-          <p class="slide-sub-lead">Delays in generating quotations and unorganized follow-ups lead directly to lost revenue and choked working capital.</p>
-        </div>
-
-        <div class="stats-row-3">
-          <div class="stat-card alert">
-            <div class="stat-big-num">12% – 18%</div>
-            <div class="stat-card-title">Estimated Monthly Turnover Leaked</div>
-            <p class="stat-card-text">Directly lost to competitors due to quotation turnaround delays (&gt;4 hours) and unorganized follow-up cycles.</p>
-            <span class="stat-footnote">Observed across regional construction & hardware suppliers</span>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-big-num">₹1.5+ Lakh Cr</div>
-            <div class="stat-card-title">Delayed MSME Receivables Choke</div>
-            <p class="stat-card-text">Working capital locked nationwide because follow-ups and payment reconciliations are handled manually on memory.</p>
-            <span class="stat-footnote">Ministry of MSME Samadhaan Monitoring Portal</span>
-          </div>
-
-          <div class="stat-card highlight">
-            <div class="stat-big-num">7x Higher</div>
-            <div class="stat-card-title">Deal Win-Rate for Fast Response</div>
-            <p class="stat-card-text">Inquiries responded to with a structured quote in &lt;15 minutes convert 7 times higher than quotes sent after 2 hours.</p>
-            <span class="stat-footnote">Lead Response Management Studies / Harvard Business Review</span>
-          </div>
-        </div>
-
-        <div class="leak-example-box">
-          <div class="leak-header-strip">
-            <strong>Anatomy of a Typical Revenue Leak (Real-World Scenario):</strong>
-          </div>
-          <div class="leak-steps-grid">
-            <div class="leak-step">
-              <span class="step-time">14:02 PM</span>
-              <strong>Inquiry Arrives:</strong> Client sends WhatsApp text for 500 bags cement (₹2.10 Lakh value).
-            </div>
-            <div class="leak-step">
-              <span class="step-time">14:00 – 18:00 PM</span>
-              <strong>Human Bottleneck:</strong> Business owner is traveling / in meetings; staff lacks pricing authority.
-            </div>
-            <div class="leak-step alert-step">
-              <span class="step-time">18:35 PM</span>
-              <strong>Revenue Lost:</strong> Owner sends manual quote. Buyer responds: <em>"Ordered from someone else who replied in 10 mins."</em>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span class="source-cite"><strong>Source / References:</strong> Ministry of MSME Annual Report (2022–23); MSME Samadhaan Delayed Payment Data; NASSCOM SME Digitalization Index (2023).</span>
-        <span>Page 03</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 04: THE SOLUTION OVERVIEW
-         =================================================================== -->
-    <article class="slide-page" id="slide-04">
-      <div class="slide-header">
-        <div class="header-tag">THE SOLUTION</div>
-        <div class="header-meta">SLIDE 04 / 16 · PLATFORM OVERVIEW</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Antromat: Zero-Human-Latency Operations System</h2>
-          <p class="slide-sub-lead">An autonomous software layer that connects communication channels directly to enterprise execution—with zero manual data entry.</p>
-        </div>
-
-        <div class="solution-grid-4">
-          <div class="sol-card">
-            <div class="sol-icon">1</div>
-            <h3 class="sol-title">Ingest Any Format</h3>
-            <p>Captures messy WhatsApp chats, Hinglish/Marathi voice notes, emails, and photos of paper slips without forcing clients to learn a new portal.</p>
-          </div>
-
-          <div class="sol-card highlight">
-            <div class="sol-icon">2</div>
-            <h3 class="sol-title">AI Intent Engine</h3>
-            <p>Understands regional language nuance and extracts structured parameters: customer identity, product SKU, quantities, delivery location, and urgency.</p>
-          </div>
-
-          <div class="sol-card">
-            <div class="sol-icon">3</div>
-            <h3 class="sol-title">Deterministic Workflows</h3>
-            <p>Executes modular backend actions: auto-calculating GST quotes, generating branded PDFs, scheduling visits, and logging CRM pipelines.</p>
-          </div>
-
-          <div class="sol-card">
-            <div class="sol-icon">4</div>
-            <h3 class="sol-title">Owner Control Cockpit</h3>
-            <p>Delivers continuous operational telemetry, audit trails, and daily WhatsApp executive digests to the business owner.</p>
-          </div>
-        </div>
-
-        <div class="outcome-strip">
-          <div class="outcome-badge">CORE OUTCOME</div>
-          <div class="outcome-text">
-            Reduces quotation, invoicing, and coordination turnaround time from <strong>hours to under 45 seconds</strong>, eliminating human errors and stopping revenue leakage.
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Antromat Operations Architecture · Designed for Indian SME operating conditions.</span>
-        <span>Page 04</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 05: TECHNICAL ARCHITECTURE
-         =================================================================== -->
-    <article class="slide-page" id="slide-05">
-      <div class="slide-header">
-        <div class="header-tag">TECHNICAL ARCHITECTURE</div>
-        <div class="header-meta">SLIDE 05 / 16 · SYSTEM SCHEMATIC</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">4-Tier Decoupled System Architecture</h2>
-          <p class="slide-sub-lead">Engineered for low-latency inference, deterministic rule validation, and seamless business system synchronization.</p>
-        </div>
-
-        <div class="arch-box-stack">
-          <div class="arch-tier-block">
-            <div class="tier-left">
-              <span class="tier-pill">TIER 01</span>
-              <strong>Multi-Channel Ingest</strong>
-            </div>
-            <div class="tier-right">
-              <span class="chip">WhatsApp Cloud API</span>
-              <span class="chip">Audio Stream Ingest</span>
-              <span class="chip">Email Webhooks</span>
-              <span class="chip">Paper Challan OCR Upload</span>
-            </div>
-          </div>
-
-          <div class="arch-arrow-divider">↓ Unstructured Payload Stream (JSON / Audio / Text)</div>
-
-          <div class="arch-tier-block highlight-tier">
-            <div class="tier-left">
-              <span class="tier-pill yellow">TIER 02</span>
-              <strong>AI NLP & Intent Core</strong>
-            </div>
-            <div class="tier-right">
-              <span class="chip yellow">Hinglish / Regional Tokenizer</span>
-              <span class="chip yellow">Entity Extractor (NER)</span>
-              <span class="chip yellow">Pricing Matrix Evaluator</span>
-              <span class="chip yellow">Confidence Scorer (&gt;99%)</span>
-            </div>
-          </div>
-
-          <div class="arch-arrow-divider">↓ Validated Parameter Payload</div>
-
-          <div class="arch-tier-block">
-            <div class="tier-left">
-              <span class="tier-pill">TIER 03</span>
-              <strong>Workflow Orchestrator</strong>
-            </div>
-            <div class="tier-right">
-              <span class="chip">Deterministic State Machine</span>
-              <span class="chip">PDF Quote Renderer</span>
-              <span class="chip">Scheduled Follow-up Daemon</span>
-              <span class="chip">Escalation & Exception Handler</span>
-            </div>
-          </div>
-
-          <div class="arch-arrow-divider">↓ Standardized API Dispatch</div>
-
-          <div class="arch-tier-block">
-            <div class="tier-left">
-              <span class="tier-pill">TIER 04</span>
-              <strong>Business Systems</strong>
-            </div>
-            <div class="tier-right">
-              <span class="chip dark">Tally Prime / Accounting ERP</span>
-              <span class="chip dark">GST Invoicing Portal</span>
-              <span class="chip dark">Google Calendar & Tasks</span>
-              <span class="chip dark">Owner Telemetry Console</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Decoupled event-driven microservices backend (Python FastAPI / Node.js daemons, Docker containerized).</span>
-        <span>Page 05</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 06: AI INTENT EXTRACTION & REGIONAL NLP
-         =================================================================== -->
-    <article class="slide-page" id="slide-06">
-      <div class="slide-header">
-        <div class="header-tag">NLP & PROPRIETARY EXTRACTION</div>
-        <div class="header-meta">SLIDE 06 / 16 · REGIONAL DIALECT ENGINE</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Parsing Regional Dialects into Verified Schemas</h2>
-          <p class="slide-sub-lead">Domain-tuned models resolve mixed-language conversational inputs into structured database entries with high accuracy.</p>
-        </div>
-
-        <div class="nlp-dual-panel">
-          <div class="nlp-input-card">
-            <div class="card-tag">RAW UNSTRUCTURED INPUT (VOICE / TEXT)</div>
-            <div class="input-speech-box">
-              "Bhai suno, <span class="tok client">Sharma Constructions</span> se bol raha hu. Kal subah <span class="tok loc">Butibori plot #14</span> par <span class="tok qty">200 bags</span> <span class="tok prod">ACC Gold Cement</span> dispatch karwa dena. Rate <span class="tok price">390 per bag</span> lagana jo bola tha. Urgent hai."
-            </div>
-            <div class="input-meta-list">
-              <div>• <strong>Input Medium:</strong> WhatsApp Voice Note (11.4s) / Text</div>
-              <div>• <strong>Processing Latency:</strong> 312 ms (Sub-second inference)</div>
-              <div>• <strong>Dialect:</strong> Central Indian Business Colloquial (Hinglish/Marathi)</div>
-            </div>
-          </div>
-
-          <div class="nlp-output-card">
-            <div class="card-tag">EXTRACTED STRUCTURED PARAMETERS</div>
-            <table class="tech-table">
-              <thead>
-                <tr>
-                  <th>Field</th>
-                  <th>Resolved Value</th>
-                  <th>Confidence</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>customer_entity</code></td>
-                  <td><strong>Sharma Constructions Pvt Ltd</strong></td>
-                  <td><span class="conf-tag">99.8%</span></td>
-                </tr>
-                <tr>
-                  <td><code>product_sku</code></td>
-                  <td><strong>ACC Gold OPC Cement (50kg)</strong></td>
-                  <td><span class="conf-tag">99.2%</span></td>
-                </tr>
-                <tr>
-                  <td><code>quantity_units</code></td>
-                  <td><strong>200 Bags</strong></td>
-                  <td><span class="conf-tag">100.0%</span></td>
-                </tr>
-                <tr>
-                  <td><code>unit_price</code></td>
-                  <td><strong>₹ 390.00 / bag</strong></td>
-                  <td><span class="conf-tag">99.5%</span></td>
-                </tr>
-                <tr>
-                  <td><code>total_calculated</code></td>
-                  <td><strong>₹ 78,000.00 + GST</strong></td>
-                  <td><span class="conf-tag">System Calc</span></td>
-                </tr>
-                <tr>
-                  <td><code>destination_site</code></td>
-                  <td><strong>Plot #14, Butibori MIDC</strong></td>
-                  <td><span class="conf-tag">98.9%</span></td>
-                </tr>
-                <tr>
-                  <td><code>priority_level</code></td>
-                  <td><strong class="red-txt">HIGH (Delivery: Tomorrow AM)</strong></td>
-                  <td><span class="conf-tag">99.1%</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Evaluated against over 1,200+ annotated regional conversation scripts from industrial and commercial trades.</span>
-        <span>Page 06</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 07: MODULAR & CUSTOM WORKFLOW ENGINE
-         =================================================================== -->
-    <article class="slide-page" id="slide-07">
-      <div class="slide-header">
-        <div class="header-tag">WORKFLOW ENGINE</div>
-        <div class="header-meta">SLIDE 07 / 16 · MODULAR & CUSTOM AUTOMATION</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Pre-Engineered Modules + Bespoke Automation</h2>
-          <p class="slide-sub-lead">Standardized operational micro-engines that can be customized to fit any business's unique daily routines.</p>
-        </div>
-
-        <div class="workflows-grid-6">
-          <div class="wf-card">
-            <span class="wf-num">MODULE 01</span>
-            <h3 class="wf-title">Quotation Engine</h3>
-            <p>Calculates tiered volume pricing, applies GST slabs, and generates a formatted PDF quotation sent to WhatsApp in &lt;45s.</p>
-          </div>
-
-          <div class="wf-card">
-            <span class="wf-num">MODULE 02</span>
-            <h3 class="wf-title">Payment Follow-Up</h3>
-            <p>Polite, conversational reminders sent on invoice due dates with embedded UPI QR codes and NEFT account details.</p>
-          </div>
-
-          <div class="wf-card">
-            <span class="wf-num">MODULE 03</span>
-            <h3 class="wf-title">CRM & Lead Sync</h3>
-            <p>Scores incoming leads by estimated value and urgency, populating CRM pipelines and pinging the right sales executive.</p>
-          </div>
-
-          <div class="wf-card">
-            <span class="wf-num">MODULE 04</span>
-            <h3 class="wf-title">Inventory Alerts</h3>
-            <p>Tracks fast-moving SKUs against incoming order commitments, triggering automated restocking alerts to owners.</p>
-          </div>
-
-          <div class="wf-card">
-            <span class="wf-num">MODULE 05</span>
-            <h3 class="wf-title">Gate & Dispatch Pass</h3>
-            <p>Extracts driver details and challan photos to issue digital gate passes and vehicle unloading queue tokens.</p>
-          </div>
-
-          <div class="wf-card highlight-wf">
-            <span class="wf-num yellow">MODULE 06</span>
-            <h3 class="wf-title">Custom Operations Workflows</h3>
-            <p>Custom-built routing logic configured specifically to automate any unique manual workflow inside a factory or office.</p>
-          </div>
-        </div>
-
-        <div class="custom-note-bar">
-          <strong>Bespoke Flexibility:</strong> We don't force businesses into rigid templates. If an enterprise has a unique multi-warehouse dispatch rule or multi-doctor scheduling routine, we engineer a custom pipeline node.
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Workflows operate as autonomous micro-daemons with automatic human-in-the-loop escalation.</span>
-        <span>Page 07</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 08: CONTROL COCKPIT & AUDIT LOGS
-         =================================================================== -->
-    <article class="slide-page" id="slide-08">
-      <div class="slide-header">
-        <div class="header-tag">ENTERPRISE TELEMETRY</div>
-        <div class="header-meta">SLIDE 08 / 16 · CONTROL COCKPIT</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Owner Control Cockpit & Live Audit Logs</h2>
-          <p class="slide-sub-lead">Complete operational transparency and control without requiring complex manual software navigation.</p>
-        </div>
-
-        <div class="cockpit-container">
-          <div class="cockpit-kpi-row">
-            <div class="kpi-box">
-              <span class="kpi-title">AVERAGE RESPONSE TIME</span>
-              <div class="kpi-number">35 Seconds</div>
-              <span class="kpi-sub">Down from 4.5+ hours</span>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-title">AUTOMATION UPTIME</span>
-              <div class="kpi-number">99.98%</div>
-              <span class="kpi-sub">24/7 background listener</span>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-title">EXTRACTION ACCURACY</span>
-              <div class="kpi-number">99.4%</div>
-              <span class="kpi-sub">Entity resolution precision</span>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-title">RECEIVABLES RECOVERY</span>
-              <div class="kpi-number">+28% Faster</div>
-              <span class="kpi-sub">Via automated reminder daemons</span>
-            </div>
-          </div>
-
-          <div class="cockpit-log-card">
-            <div class="log-card-header">
-              <span>REAL-TIME AUDIT LOG (SYSTEM TELEMETRY)</span>
-              <span class="live-tag">● LIVE ENGINE</span>
-            </div>
-            <table class="tech-table compact">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Channel</th>
-                  <th>Action Triggered</th>
-                  <th>Party / Client</th>
-                  <th>Execution Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>14:28:10</td>
-                  <td>WhatsApp</td>
-                  <td>Quotation PDF Generated & Dispatched (₹2,10,000)</td>
-                  <td>Rajesh Buildcon</td>
-                  <td><span class="status-pill green">DISPATCHED (35s)</span></td>
-                </tr>
-                <tr>
-                  <td>14:25:04</td>
-                  <td>Automated</td>
-                  <td>Payment Follow-up Sent with UPI QR (Inv #1094)</td>
-                  <td>Gupta Steels</td>
-                  <td><span class="status-pill green">DELIVERED</span></td>
-                </tr>
-                <tr>
-                  <td>14:19:50</td>
-                  <td>Voice Note</td>
-                  <td>Hinglish Audio Parsed & CRM Pipeline Updated</td>
-                  <td>Deshmukh Clinic</td>
-                  <td><span class="status-pill green">PROCESSED</span></td>
-                </tr>
-                <tr>
-                  <td>14:12:33</td>
-                  <td>Bank Webhook</td>
-                  <td>₹78,000 NEFT Payment Reconciled & Receipt Sent</td>
-                  <td>Sharma Const.</td>
-                  <td><span class="status-pill green">RECONCILED</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Immutable timestamped event logs provide business owners complete operational auditability.</span>
-        <span>Page 08</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 09: INDUSTRY OPERATING BLUEPRINTS
-         =================================================================== -->
-    <article class="slide-page" id="slide-09">
-      <div class="slide-header">
-        <div class="header-tag">VERTICAL BLUEPRINTS</div>
-        <div class="header-meta">SLIDE 09 / 16 · SECTOR ADAPTATION</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Tailored Workflows Across Key SME Sectors</h2>
-          <p class="slide-sub-lead">Configured around existing real-world operational flows without changing frontline habits.</p>
-        </div>
-
-        <div class="blueprints-grid-4">
-          <div class="bp-card">
-            <div class="bp-badge">CONSTRUCTION & MATERIALS</div>
-            <h3 class="bp-title">Suppliers & Contractors</h3>
-            <div class="bp-flow-list">
-              <div><strong>Input:</strong> Voice note quote request / site photo</div>
-              <div><strong>Workflow:</strong> Price calculation + GST PDF Quote</div>
-              <div><strong>Output:</strong> Direct WhatsApp Quote + Driver dispatch alert</div>
-            </div>
-          </div>
-
-          <div class="bp-card">
-            <div class="bp-badge">REAL ESTATE</div>
-            <h3 class="bp-title">Builders & Developers</h3>
-            <div class="bp-flow-list">
-              <div><strong>Input:</strong> Inquiry text / brochure request</div>
-              <div><strong>Workflow:</strong> Instant floor plan PDF + site visit scheduler</div>
-              <div><strong>Output:</strong> Calendar invite + Sales team auto-routing</div>
-            </div>
-          </div>
-
-          <div class="bp-card">
-            <div class="bp-badge">HARDWARE & TRADE</div>
-            <h3 class="bp-title">Wholesale Distributors</h3>
-            <div class="bp-flow-list">
-              <div><strong>Input:</strong> Retailer handwritten reorder photo</div>
-              <div><strong>Workflow:</strong> OCR item matching + credit limit check</div>
-              <div><strong>Output:</strong> GST Invoice + Transporter dispatch note</div>
-            </div>
-          </div>
-
-          <div class="bp-card">
-            <div class="bp-badge">INSTITUTIONAL OPS</div>
-            <h3 class="bp-title">Facilities & Supply Chains</h3>
-            <div class="bp-flow-list">
-              <div><strong>Input:</strong> Daily consumption log / stock request</div>
-              <div><strong>Workflow:</strong> Demand forecasting + supplier PO generator</div>
-              <div><strong>Output:</strong> Consolidated daily procurement order</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="insight-bar-small">
-          <em>Operational Insight:</em> Blueprints are adapted from studying both Indian SME trade practices and international enterprise facilities operations.
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Adaptable to any traditional trade or service industry within 24–48 hours of onboarding.</span>
-        <span>Page 09</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 10: GROUND RESEARCH & CUSTOMER DISCOVERY
-         =================================================================== -->
-    <article class="slide-page" id="slide-10">
-      <div class="slide-header">
-        <div class="header-tag">CUSTOMER DISCOVERY</div>
-        <div class="header-meta">SLIDE 10 / 16 · GROUND RESEARCH & CASE MODELS</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Ground Research & Exploratory Case Studies</h2>
-          <p class="slide-sub-lead">Formulated through direct in-depth discussions with regional business owners and enterprise operators.</p>
-        </div>
-
-        <div class="discovery-grid-4">
-          <div class="disc-card">
-            <span class="disc-badge">DISCOVERY 01</span>
-            <h3 class="disc-title">Building Materials Supplier</h3>
-            <p class="disc-context"><strong>Context:</strong> Supplier receiving 25+ messy WhatsApp quotes daily across Wardha and Nagpur.</p>
-            <p class="disc-learning"><strong>Hypothetical Impact:</strong> Quotes generated automatically in &lt;45s, eliminating dropped inquiries and saving an estimated 15–20 hours of manual owner effort weekly.</p>
-          </div>
-
-          <div class="disc-card">
-            <span class="disc-badge">DISCOVERY 02</span>
-            <h3 class="disc-title">Real Estate Developers</h3>
-            <p class="disc-context"><strong>Context:</strong> Builders losing track of site visit bookings and brochure leads from personal broker chats.</p>
-            <p class="disc-learning"><strong>Hypothetical Impact:</strong> Instant brochure delivery + automated site appointment confirmations preventing lead drop-off.</p>
-          </div>
-
-          <div class="disc-card">
-            <span class="disc-badge">DISCOVERY 03</span>
-            <h3 class="disc-title">Hardware & Electrical Wholesaler</h3>
-            <p class="disc-context"><strong>Context:</strong> Handling messy handwritten slips from village retailers; delayed billing by 24–48 hrs.</p>
-            <p class="disc-learning"><strong>Hypothetical Impact:</strong> OCR parsing of item lists directly into accounting ledgers, accelerating billing cycles.</p>
-          </div>
-
-          <div class="disc-card highlight-disc">
-            <span class="disc-badge yellow">INSTITUTIONAL STUDY</span>
-            <h3 class="disc-title">Sodexo / University Mess Ops</h3>
-            <p class="disc-context"><strong>Context:</strong> Studied how global facility brands (e.g. Sodexo managing university mess) handle supply chain tracking and stock forecasting.</p>
-            <p class="disc-learning"><strong>Key Insight:</strong> Translated enterprise inventory demand principles into simple, lightweight WhatsApp workflows for SMEs.</p>
-          </div>
-        </div>
-
-        <div class="discovery-disclaimer">
-          <strong>Research Note:</strong> The above represents conceptual modeling, qualitative interviews, and exploratory feasibility studies conducted directly with industry stakeholders.
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Field research conducted across Wardha, Nagpur, Butibori industrial belt and campus facilities (2025–26).</span>
-        <span>Page 10</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 11: TRL & ROADMAP
-         =================================================================== -->
-    <article class="slide-page" id="slide-11">
-      <div class="slide-header">
-        <div class="header-tag">ROADMAP & READINESS</div>
-        <div class="header-meta">SLIDE 11 / 16 · TRL PROGRESSION</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Technology Readiness Level (TRL) Progression</h2>
-          <p class="slide-sub-lead">Advancing from validated prototype (TRL 3) to structured commercial deployment (TRL 7).</p>
-        </div>
-
-        <div class="trl-timeline-grid">
-          <div class="trl-card completed">
-            <div class="trl-status">COMPLETED</div>
-            <h3 class="trl-level">TRL 1 – TRL 2</h3>
-            <span class="trl-label">Research & Discovery</span>
-            <p>50+ SME interviews mapping operational leaks; foundational NLP parser architecture design.</p>
-          </div>
-
-          <div class="trl-card current">
-            <div class="trl-status yellow">CURRENT STAGE · TRL 3</div>
-            <h3 class="trl-level">TRL 3</h3>
-            <span class="trl-label">Proof of Concept Validated</span>
-            <p>Functional parser resolving regional Hinglish/Marathi text and executing simulated quotation workflows.</p>
-          </div>
-
-          <div class="trl-card future">
-            <div class="trl-status">MONTHS 1 – 6 (GENESIS)</div>
-            <h3 class="trl-level">TRL 4 – TRL 5</h3>
-            <span class="trl-label">Integrated Enterprise MVP</span>
-            <p>Direct integrations with Tally, WhatsApp Business Cloud API, and 10 on-ground pilot enterprise deployments.</p>
-          </div>
-
-          <div class="trl-card future">
-            <div class="trl-status">MONTHS 7 – 12</div>
-            <h3 class="trl-level">TRL 6 – TRL 7</h3>
-            <span class="trl-label">Commercial Rollout</span>
-            <p>Multi-tenant cloud architecture, SLA monitoring, and onboarding paying SME accounts across Maharashtra.</p>
-          </div>
-        </div>
-
-        <div class="genesis-milestone-box">
-          <strong>MeitY GENESIS 3.0 Milestone Target:</strong> Successfully complete TRL 4 & TRL 5 validation within 6 months of incubation, converting prototype workflows into 10 enterprise deployments.
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>TRL definitions aligned with MeitY / DST startup evaluation criteria.</span>
-        <span>Page 11</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 12: COMMERCIAL & MONETIZATION MODEL
-         =================================================================== -->
-    <article class="slide-page" id="slide-12">
-      <div class="slide-header">
-        <div class="header-tag">BUSINESS MODEL</div>
-        <div class="header-meta">SLIDE 12 / 16 · MONETIZATION STRUCTURE</div>
-      </div>
-
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Simple, High-Retention Monetization Model</h2>
-          <p class="slide-sub-lead">Aligned with SME cash flows: Simple setup followed by predictable monthly recurring subscription.</p>
-        </div>
-
-        <div class="monetization-grid-2">
-          <div class="biz-model-card">
-            <div class="biz-card-tag">STREAM 01</div>
-            <h3 class="biz-card-title">1. One-Time Onboarding & Setup Fee</h3>
-            <p class="biz-card-desc">Charged once per enterprise during deployment to cover configuration and master data setup.</p>
-            <ul class="biz-feature-list">
-              <li>Master item catalog, price slabs, and SKU ingestion.</li>
-              <li>WhatsApp Business Cloud API registration and verification.</li>
-              <li>Accounting ERP / Tally webhook integration.</li>
-              <li>Zero-friction staff handover and on-site testing.</li>
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Businesses don't have a data problem.<br>
+          <em>They have a memory problem.</em>
+        </h2>
+        <p class="slide-subhead">
+          Every day an Indian business generates hundreds of customer conversations, quotations, invoices, production updates and payment reminders. Most of them disappear.
+        </p>
+
+        <div class="problem-grid-2">
+          <div class="problem-col">
+            <span class="problem-col-tag">THE FORMAL LAYER</span>
+            <h3 class="problem-col-title">Software Records Transactions</h3>
+            <ul class="problem-list">
+              <li>CRM logs closed deals manually</li>
+              <li>ERP captures inventory after the fact</li>
+              <li>Accounting software registers historical invoices</li>
+              <li>Spreadsheets capture outdated static numbers</li>
             </ul>
           </div>
 
-          <div class="biz-model-card highlight-biz">
-            <div class="biz-card-tag yellow">STREAM 02 · CORE REVENUE</div>
-            <h3 class="biz-card-title">2. Monthly Recurring Platform Subscription</h3>
-            <p class="biz-card-desc">Predictable monthly SaaS subscription for continuous 24/7 autonomous workflow execution.</p>
-            <ul class="biz-feature-list">
-              <li>24/7 AI intent parser and background listener daemon.</li>
-              <li>Automated quote generation & payment reminder engine.</li>
-              <li>Owner operations telemetry dashboard & daily brief.</li>
-              <li>Continuous model maintenance and uptime SLA support.</li>
+          <div class="problem-col" style="border-color: rgba(169, 76, 71, 0.4);">
+            <span class="problem-col-tag" style="color: var(--accent-red);">THE GROUND REALITY</span>
+            <h3 class="problem-col-title">Operations Happen in Conversation</h3>
+            <ul class="problem-list">
+              <li><strong>WhatsApp chats & voice notes:</strong> Order alterations, price agreements</li>
+              <li><strong>Quick phone calls:</strong> Urgent dispatch approvals, production hold-ups</li>
+              <li><strong>Informal estimates:</strong> Loose PDFs and handwritten challans</li>
+              <li><strong>Fragmented follow-ups:</strong> Delayed payments and credit terms</li>
             </ul>
           </div>
         </div>
 
-        <div class="pricing-variables-panel">
-          <div class="pv-header"><strong>Subscription Pricing Determination Factors:</strong></div>
-          <div class="pv-grid">
-            <div><strong>• Number of Functions:</strong> Quotes, billing, CRM, reminders, or dispatch.</div>
-            <div><strong>• Daily Operation Volume:</strong> Number of daily inquiries & transactions processed.</div>
-            <div><strong>• ERP Integration Depth:</strong> Sync complexity with local accounting systems.</div>
-            <div><strong>• Custom Workflows:</strong> Bespoke routing logic engineered for the enterprise.</div>
-          </div>
+        <div class="problem-conclusion-banner">
+          <strong>The Founder Bottleneck:</strong> The owner remembers everything. When the owner steps away, operations slow down. Context disappears. Mistakes compound.
         </div>
       </div>
 
-      <div class="slide-footer">
-        <span>Pricing structured to deliver immediate ROI (&lt;30 days) via saved labor and recovered revenue leaks.</span>
-        <span>Page 12</span>
+      <div class="slide-bottom-bar">
+        <span>The Problem · Memory Architecture</span>
+        <span>Antromat · Slide 02</span>
       </div>
     </article>
 
 
-    <!-- ===================================================================
-         SLIDE 13: MARKET OPPORTUNITY
-         =================================================================== -->
-    <article class="slide-page" id="slide-013">
-      <div class="slide-header">
-        <div class="header-tag">MARKET SIZING</div>
-        <div class="header-meta">SLIDE 13 / 16 · TAM / SAM / SOM</div>
+    <!-- =================================================================
+         SLIDE 03 — WHY NOW?
+         ================================================================= -->
+    <article class="slide-card" id="slide-03" data-slide-index="3">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">TIMING & TECHNOLOGICAL SHIFT</span>
+        <span class="slide-index">SLIDE 03 / 17</span>
       </div>
 
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Addressable Market & Digitalization Tailwinds</h2>
-          <p class="slide-sub-lead">Capitalizing on massive WhatsApp business penetration and the urgent demand for SME automation.</p>
-        </div>
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Why Now? <em>Three shifts</em> make Business Memory possible today.
+        </h2>
+        <p class="slide-subhead">
+          Indian businesses have always run on informal communication. Until now, software could not understand it without forcing painful manual data entry.
+        </p>
 
-        <div class="market-layout">
-          <div class="market-stack">
-            <div class="m-card tam">
-              <span class="m-label">TAM · TOTAL ADDRESSABLE MARKET</span>
-              <div class="m-value">63.38 Million MSMEs in India</div>
-              <p class="m-info">$18B+ estimated enterprise software & digitalization market across Bharat.</p>
-            </div>
-
-            <div class="m-card sam">
-              <span class="m-label">SAM · SERVICEABLE ADDRESSABLE MARKET</span>
-              <div class="m-value">12 Million High-Transaction SMEs</div>
-              <p class="m-info">Manufacturing, Building Supplies, Logistics, Wholesale & Regional Healthcare.</p>
-            </div>
-
-            <div class="m-card som">
-              <span class="m-label">SOM · INITIAL FOCUS (MAHARASHTRA HUBS)</span>
-              <div class="m-value">150,000 Industrial & Trade SMEs</div>
-              <p class="m-info">Nagpur, Butibori, Wardha, Pune, Nashik, Aurangabad industrial belts.</p>
+        <div class="why-now-grid">
+          <div class="why-card">
+            <div>
+              <div class="why-num">01 · CONVERSATIONAL INTELLIGENCE</div>
+              <h3 class="why-title">Language Models Understand Unstructured Communication</h3>
+              <p class="why-desc">
+                Modern LLMs extract structured commitments, pricing logic, and timelines directly from messy, informal Hinglish chats without strict templates.
+              </p>
             </div>
           </div>
 
-          <div class="drivers-card">
-            <h3 class="drivers-title">Why Now? 3 Critical Catalysts:</h3>
-            <div class="driver-box">
-              <strong>1. Universal WhatsApp Dominance:</strong> 500M+ users in India; 95% of SME transactions are discussed over WhatsApp chat, but 0% are automated.
+          <div class="why-card">
+            <div>
+              <div class="why-num">02 · MULTIMODAL PERCEPTION</div>
+              <h3 class="why-title">Multimodal AI Reads the Factory Floor</h3>
+              <p class="why-desc">
+                Computer vision and document models can read scanned tax invoices, handwritten lorry receipts, delivery challans, and machinery meter photos in milliseconds.
+              </p>
             </div>
-            <div class="driver-box">
-              <strong>2. Desktop Software Rejection:</strong> Indian business owners find traditional desktop CRM/ERPs too complex and rigid.
-            </div>
-            <div class="driver-box">
-              <strong>3. Low-Cost AI Inference:</strong> Modern lightweight NLP models allow sub-second intent parsing at pennies per thousand transactions.
+          </div>
+
+          <div class="why-card">
+            <div>
+              <div class="why-num">03 · REGIONAL AUDIO PIPELINES</div>
+              <h3 class="why-title">Audio Intelligence for Dialects & Voice Notes</h3>
+              <p class="why-desc">
+                Field operators prefer speaking over typing. Advanced speech-to-text reliably transcribes voice notes in Hindi, Marathi, and mixed Indian business dialects.
+              </p>
             </div>
           </div>
         </div>
+
+        <div class="problem-conclusion-banner" style="border-left-color: var(--accent-green); background: var(--accent-green-glow);">
+          <strong>The Inflection Point:</strong> For the first time, software understands the way Indian businesses actually run, without forcing them to change how they communicate.
+        </div>
       </div>
 
-      <div class="slide-footer">
-        <span class="source-cite"><strong>Source / References:</strong> Ministry of MSME Annual Report (2022–23); Meta India Business Report (2023); Bain & Company SME Software Report (2022).</span>
-        <span>Page 13</span>
+      <div class="slide-bottom-bar">
+        <span>Why Now · Multimodal & Audio Intelligence</span>
+        <span>Antromat · Slide 03</span>
       </div>
     </article>
 
 
-    <!-- ===================================================================
-         SLIDE 14: FOUNDER & TECHNICAL BACKGROUND
-         =================================================================== -->
-    <article class="slide-page" id="slide-14">
-      <div class="slide-header">
-        <div class="header-tag">FOUNDER PROFILE</div>
-        <div class="header-meta">SLIDE 14 / 16 · TECHNICAL BACKGROUND</div>
+    <!-- =================================================================
+         SLIDE 04 — THE SOLUTION
+         ================================================================= -->
+    <article class="slide-card" id="slide-04" data-slide-index="4">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag green">THE SOLUTION</span>
+        <span class="slide-index">SLIDE 04 / 17</span>
       </div>
 
-      <div class="slide-body">
-        <div class="founder-grid">
-          <div class="founder-card-main">
-            <div class="founder-photo-wrapper">
-              <img src="founder.jpg" alt="Soham Gaul - Founder" class="founder-profile-img">
-              <div class="founder-org-pill">
-                <img src="logo.png" alt="Antromat Logo" class="f-small-logo">
-                <span>FOUNDER & ARCHITECT</span>
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          The Solution: <em>Business Memory</em>
+        </h2>
+        <p class="slide-subhead">
+          Antromat sits quietly behind your operations — turning everyday conversations, invoices, and updates into connected business intelligence.
+        </p>
+
+        <div class="solution-flow-grid">
+          <!-- Column 1: Inputs -->
+          <div class="flow-col">
+            <span class="flow-tag">INPUTS</span>
+            <h3 class="flow-title">Raw Activity</h3>
+            <ul class="flow-items-list">
+              <li>💬 WhatsApp messages & threads</li>
+              <li>🎙️ 15-second audio voice notes</li>
+              <li>✉️ Vendor & customer emails</li>
+              <li>📄 Invoices, challans & PDFs</li>
+              <li>📞 Recorded customer phone calls</li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Business Memory Core -->
+          <div class="flow-col center-core">
+            <span class="flow-tag" style="color: var(--accent-amber);">CENTRAL ENGINE</span>
+            <h3 class="flow-title" style="color: var(--accent-amber);">Business Memory</h3>
+            <ul class="flow-items-list">
+              <li>🧠 Understands conversations automatically</li>
+              <li>🔗 Links context across sales, floor & finance</li>
+              <li>⏱️ Tracks customer commitments & deadlines</li>
+              <li>📚 Maintains living historical institutional memory</li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Outputs -->
+          <div class="flow-col">
+            <span class="flow-tag">OUTPUTS</span>
+            <h3 class="flow-title">Executive Action</h3>
+            <ul class="flow-items-list">
+              <li>🌅 Daily 08:00 AM Morning Briefing</li>
+              <li>🔍 Instant Search: Ask Antromat Anything</li>
+              <li>⚡ Automated follow-up drafts</li>
+              <li>🚨 Proactive operational bottleneck alerts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="problem-conclusion-banner">
+          Antromat doesn't replace how teams work. It turns daily operational chaos into structured, searchable business memory.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Architecture · Inputs, Memory & Outputs</span>
+        <span>Antromat · Slide 04</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 05 — THE PRODUCT: MORNING BRIEFING
+         ================================================================= -->
+    <article class="slide-card" id="slide-05" data-slide-index="5">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag blue">PRODUCT FEATURE</span>
+        <span class="slide-index">SLIDE 05 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          The Product: <em>The 08:00 AM Morning Briefing</em>
+        </h2>
+        <p class="slide-subhead">
+          Every morning starts with one page. Instead of checking 5 apps and making 20 phone calls, the business owner sees everything that matters before the day begins.
+        </p>
+
+        <div class="product-split-grid">
+          <div class="product-media-frame">
+            <img src="assets/morning_briefing.jpg" alt="Antromat Executive Morning Briefing Document">
+          </div>
+
+          <div class="briefing-bullet-list">
+            <div class="briefing-bullet-item">
+              <span class="bullet-icon">01</span>
+              <div class="bullet-text">
+                <h4>Urgent Priorities for Today</h4>
+                <p>Top 3 executive decisions needing sign-off or action before 11:00 AM.</p>
               </div>
             </div>
-            <h2 class="f-name">Soham Gaul</h2>
-            <span class="f-role">Founder & Systems Architect</span>
-            <span class="f-education">B.Tech in Artificial Intelligence & Data Science</span>
-            <span class="f-location">Wardha, Maharashtra</span>
-            <p class="f-statement">
-              Hands-on AI engineer building practical, low-latency machine learning workflows for Indian enterprise operations.
+
+            <div class="briefing-bullet-item">
+              <span class="bullet-icon">02</span>
+              <div class="bullet-text">
+                <h4>Customer Follow-Ups Due</h4>
+                <p>Quotes delivered 48 hours ago without replies; draft WhatsApp message ready to send.</p>
+              </div>
+            </div>
+
+            <div class="briefing-bullet-item">
+              <span class="bullet-icon">03</span>
+              <div class="bullet-text">
+                <h4>Overdue Invoices & Payment Risks</h4>
+                <p>Specific ledger aging flagged with exact promises made by the client's accountant.</p>
+              </div>
+            </div>
+
+            <div class="briefing-bullet-item">
+              <span class="bullet-icon">04</span>
+              <div class="bullet-text">
+                <h4>Factory & Dispatch Bottlenecks</h4>
+                <p>Loom speed variances, raw material hold-ups, and vehicle arrival confirmations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Product · Morning Briefing Engine</span>
+        <span>Antromat · Slide 05</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 06 — THE PRODUCT: ASK ANTROMAT ANYTHING
+         ================================================================= -->
+    <article class="slide-card" id="slide-06" data-slide-index="6">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag blue">PRODUCT FEATURE</span>
+        <span class="slide-index">SLIDE 06 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          The Product: <em>Ask Antromat Anything</em>
+        </h2>
+        <p class="slide-subhead">
+          Search your business like Google. Ask questions in natural English, Hindi, or Hinglish — answered exclusively from your company's actual records.
+        </p>
+
+        <div class="ask-queries-grid">
+          <div class="query-specimen-card">
+            <div class="query-q">Which customers haven't ordered in 30 days?</div>
+            <div class="query-a">
+              Found 4 accounts: Apex Texfab (last order 34 days ago, ₹4.8L avg), Sharma Garments (38 days), Royal Mills (41 days). Draft re-engagement notes prepared.
+            </div>
+          </div>
+
+          <div class="query-specimen-card">
+            <div class="query-q">Did Rajesh confirm the fabric price yesterday?</div>
+            <div class="query-a">
+              Yes. WhatsApp voice note at 4:18 PM confirmed ₹245/meter for 3,000 meters grey fabric. Delivery promised next Tuesday.
+            </div>
+          </div>
+
+          <div class="query-specimen-card">
+            <div class="query-q">What invoices are overdue past 45 days?</div>
+            <div class="query-a">
+              2 invoices totaling ₹5,84,000. Metro Distributors (Inv #1089, ₹3.4L, 52 days overdue) and Kothari Traders (Inv #1102, ₹2.44L, 48 days).
+            </div>
+          </div>
+
+          <div class="query-specimen-card">
+            <div class="query-q">What's holding up batch #402 delivery?</div>
+            <div class="query-a">
+              Dyeing supervisor sent a note at 11:20 AM: chemical shipment delayed by 18 hours. Batch delayed until tomorrow 3:00 PM.
+            </div>
+          </div>
+        </div>
+
+        <div class="problem-conclusion-banner" style="margin-top:20px;">
+          <strong>Zero Hallucination:</strong> Grounded 100% in company transcripts, invoices, and logs with clickable source citations.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Product · Natural Language Business Search</span>
+        <span>Antromat · Slide 06</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 07 — HOW IT WORKS: THE 4 LAYERS
+         ================================================================= -->
+    <article class="slide-card" id="slide-07" data-slide-index="7">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">SYSTEM ARCHITECTURE</span>
+        <span class="slide-index">SLIDE 07 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          How It Works: <em>The 4 Layers of Business Memory</em>
+        </h2>
+        <p class="slide-subhead">
+          A continuous, deterministic processing pipeline transforming ambient enterprise chaos into clean intelligence.
+        </p>
+
+        <div class="layers-horizontal-grid">
+          <div class="layer-step-card">
+            <span class="layer-idx">LAYER 01</span>
+            <h3 class="layer-name">Capture</h3>
+            <p class="layer-text">
+              Ingests unstructured communication from WhatsApp, voice notes, emails, scanned invoices, and field notes with zero manual data entry.
             </p>
           </div>
 
-          <div class="founder-experience-block">
-            <div class="exp-card highlight-exp">
-              <div class="exp-header">
-                <span class="exp-role">Software & Data Engineering Intern</span>
-                <strong class="exp-company">TruBoard Partners (Mumbai)</strong>
-              </div>
-              <p class="exp-text">
-                Worked directly on financial infrastructure & real estate asset management technology:
-              </p>
-              <ul class="exp-bullet-list">
-                <li>Built and worked on <strong>MIS (Management Information System) Mappers</strong> and backend data pipelines to organize complex real estate reporting.</li>
-                <li>Gained deep, practical insights into how enterprise real estate companies and asset managers manage workflows, data silos, and operational bottlenecks.</li>
-                <li>Applied these enterprise principles to design lightweight, accessible operational systems for grassroots SMEs.</li>
+          <div class="layer-step-card">
+            <span class="layer-idx">LAYER 02</span>
+            <h3 class="layer-name">Structure</h3>
+            <p class="layer-text">
+              Understands conversations, extracts prices, quantities, delivery commitments, payment terms, and client intent automatically.
+            </p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">LAYER 03</span>
+            <h3 class="layer-name">Connect</h3>
+            <p class="layer-text">
+              Links conversations to customers, production runs, invoices, and payments — building a continuous relational context graph.
+            </p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">LAYER 04</span>
+            <h3 class="layer-name">Assist</h3>
+            <p class="layer-text">
+              Produces the morning briefing, answers operational queries, surfaces overdue invoices, and drafts proactive customer follow-ups.
+            </p>
+          </div>
+        </div>
+
+        <div class="problem-conclusion-banner" style="margin-top:28px;">
+          Each layer operates autonomously in the background. The user simply talks on WhatsApp or checks their morning screen.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Architecture · The 4-Layer Processing Pipeline</span>
+        <span>Antromat · Slide 07</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 08 — WORKFLOWS BUILT ON BUSINESS MEMORY
+         ================================================================= -->
+    <article class="slide-card" id="slide-08" data-slide-index="8">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">MODULAR WORKFLOWS</span>
+        <span class="slide-index">SLIDE 08 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Workflows Built on <em>Business Memory</em>
+        </h2>
+        <p class="slide-subhead">
+          Antromat begins where operations create the most daily friction, connecting three core operational pillars.
+        </p>
+
+        <div class="workflows-deck-grid">
+          <div class="workflow-deck-card">
+            <span class="wf-tag">COMMERCIAL</span>
+            <h3 class="wf-headline">Sales Workflow</h3>
+            <ul class="wf-items">
+              <li>Customer conversation timeline</li>
+              <li>Quotation delivery & status tracker</li>
+              <li>Deal follow-up notifications</li>
+              <li>Dormant account reactivation alerts</li>
+            </ul>
+          </div>
+
+          <div class="workflow-deck-card">
+            <span class="wf-tag">MANUFACTURING</span>
+            <h3 class="wf-headline">Operations</h3>
+            <ul class="wf-items">
+              <li>Daily factory floor voice log</li>
+              <li>Batch production stage monitoring</li>
+              <li>Dispatch and transport updates</li>
+              <li>Supplier delivery delay alerts</li>
+            </ul>
+          </div>
+
+          <div class="workflow-deck-card">
+            <span class="wf-tag">LIQUIDITY</span>
+            <h3 class="wf-headline">Finance</h3>
+            <ul class="wf-items">
+              <li>Overdue invoice aging ledger</li>
+              <li>Recorded payment commitments</li>
+              <li>Polite WhatsApp reminder drafts</li>
+              <li>Tally & Busy reconciliation</li>
+            </ul>
+          </div>
+
+          <div class="workflow-deck-card" style="background:#191919; border-color:var(--accent-amber);">
+            <span class="wf-tag" style="color:var(--accent-amber);">FOUNDATION</span>
+            <h3 class="wf-headline" style="color:var(--accent-amber);">Business Memory</h3>
+            <ul class="wf-items">
+              <li>The single source of truth</li>
+              <li>Links sales, floor & finance</li>
+              <li>Searchable historical knowledge</li>
+              <li>No silos between departments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Workflows · Sales, Operations & Finance</span>
+        <span>Antromat · Slide 08</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 09 — INITIAL ICP
+         ================================================================= -->
+    <article class="slide-card" id="slide-09" data-slide-index="9">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">TARGET MARKET</span>
+        <span class="slide-index">SLIDE 09 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Initial ICP: <em>Indian SME Manufacturing</em>
+        </h2>
+        <p class="slide-subhead">
+          Focusing on businesses where operations are high-velocity, communications are messy, and the owner is the operational bottleneck.
+        </p>
+
+        <div class="icp-split-grid">
+          <!-- Left: Documentary Photo Grid -->
+          <div class="icp-gallery-grid">
+            <div class="icp-img-box">
+              <img src="assets/textile_mill.jpg" alt="Textile Mill in Maharashtra">
+              <div class="icp-caption-overlay">Textile Mills & Weaving</div>
+            </div>
+            <div class="icp-img-box">
+              <img src="assets/garment_floor.jpg" alt="Garment Manufacturing Floor">
+              <div class="icp-caption-overlay">Garment Units & Apparel</div>
+            </div>
+            <div class="icp-img-box">
+              <img src="assets/warehouse.jpg" alt="Logistics Warehouse Dock">
+              <div class="icp-caption-overlay">Warehouses & Logistics</div>
+            </div>
+            <div class="icp-img-box">
+              <img src="assets/chemical_plant.jpg" alt="Chemical Processing Plant">
+              <div class="icp-caption-overlay">Chemicals & Regional Distr.</div>
+            </div>
+          </div>
+
+          <!-- Right: Profile Details -->
+          <div class="icp-profile-card">
+            <div>
+              <h3 class="icp-profile-title">Profile Characteristics</h3>
+              <ul class="problem-list" style="gap:12px;">
+                <li><strong>Revenue Scale:</strong> ₹5 Crore to ₹50 Crore annual turnover.</li>
+                <li><strong>Leadership:</strong> Founder/owner manages day-to-day coordination.</li>
+                <li><strong>Daily Volume:</strong> 200+ WhatsApp messages & audio notes daily.</li>
+                <li><strong>High Friction:</strong> Frequent coordination gaps between sales and dispatch.</li>
+                <li><strong>Delayed Collections:</strong> Payment follow-ups slipping through cracks.</li>
               </ul>
             </div>
 
-            <div class="exp-mini-grid">
-              <div class="mini-cred">
-                <strong>Applied AI Engineering</strong>
-                <p>Proficient in Python FastAPI, Docker, Transformer fine-tuning, and deterministic state orchestration.</p>
-              </div>
-              <div class="mini-cred">
-                <strong>Tier-2/3 Grounded Context</strong>
-                <p>Native understanding of the conversational nuances in Hindi, Marathi, and Hinglish business trade.</p>
-              </div>
+            <div class="problem-conclusion-banner" style="margin-top:16px;">
+              <strong>High Pain, Immediate ROI:</strong> Saving just one missed order or recovering one overdue invoice pays for Antromat for an entire year.
             </div>
           </div>
         </div>
       </div>
 
-      <div class="slide-footer">
-        <span>Committed 100% full-time to building Antromat and driving MSME operations digitization.</span>
-        <span>Page 14</span>
+      <div class="slide-bottom-bar">
+        <span>ICP · Indian Manufacturing SMEs</span>
+        <span>Antromat · Slide 09</span>
       </div>
     </article>
 
 
-    <!-- ===================================================================
-         SLIDE 15: WHY MEITY GENESIS 3.0 & INCUBATION ASK
-         =================================================================== -->
-    <article class="slide-page" id="slide-15">
-      <div class="slide-header">
-        <div class="header-tag">GENESIS INCUBATION ASK</div>
-        <div class="header-meta">SLIDE 15 / 16 · MENTORSHIP & RESOURCE PLAN</div>
+    <!-- =================================================================
+         SLIDE 10 — MARKET OPPORTUNITY
+         ================================================================= -->
+    <article class="slide-card" id="slide-10" data-slide-index="10">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">MARKET EXPANSION</span>
+        <span class="slide-index">SLIDE 10 / 17</span>
       </div>
 
-      <div class="slide-body">
-        <div class="section-title-group">
-          <h2 class="slide-h2">Why MeitY GENESIS 3.0: Mentorship & Incubation Support</h2>
-          <p class="slide-sub-lead">The immense value of incubation to bridge the gap between technical prototype and scalable enterprise venture.</p>
-        </div>
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Millions of Indian businesses still run on <em>conversations.</em>
+        </h2>
+        <p class="slide-subhead">
+          India has over 63 million MSMEs across manufacturing, textiles, logistics, chemicals, and distribution.
+        </p>
 
-        <div class="incubation-dual-grid">
-          <!-- Mentorship Block -->
-          <div class="mentor-card">
-            <div class="mentor-title">IMMENSE NEED FOR HOLISTIC STARTUP MENTORSHIP</div>
-            <div class="mentor-points">
-              <div class="m-point">
-                <strong>• Go-To-Market (GTM) Strategy:</strong> Guidance on structuring B2B enterprise outreach, customer onboarding playbooks, and CAC reduction.
-              </div>
-              <div class="m-point">
-                <strong>• Enterprise Pricing & Contracts:</strong> Mentorship on formulating SaaS subscription tiers and negotiating annual enterprise MSAs.
-              </div>
-              <div class="m-point">
-                <strong>• Technical Architecture & Security:</strong> Guidance on DPDP Act 2023 compliance, data isolation, and enterprise-grade uptime SLAs.
-              </div>
-              <div class="m-point">
-                <strong>• Founder Mentorship & Scaling:</strong> Strategic guidance from experienced founders on navigating early-stage hiring, operations, and governance.
-              </div>
-            </div>
-          </div>
-
-          <!-- Realistic Cost Drivers -->
-          <div class="budget-card">
-            <div class="budget-title">ESTIMATED OPERATIONAL COST DRIVERS (12 MONTHS)</div>
-            <div class="budget-items-list">
-              <div class="b-item">
-                <strong>1. API & LLM Inference Costs:</strong> WhatsApp Cloud API message credits, speech-to-text transcription, and model token usage.
-              </div>
-              <div class="b-item">
-                <strong>2. Cloud & Server Infrastructure:</strong> Dedicated 24/7 worker daemons, database instances, and uptime monitoring nodes.
-              </div>
-              <div class="b-item">
-                <strong>3. Client Travel & On-Site Deployments:</strong> Travel expenses to visit industrial SME clusters in Nagpur, Butibori, and Wardha for hands-on onboarding.
-              </div>
-              <div class="b-item">
-                <strong>4. Legal, Incorporation & Documentation:</strong> Corporate registration, DPDP compliance audit, and client service agreements.
-              </div>
-              <div class="b-item">
-                <strong>5. Hardware & Tech Upgrades:</strong> Testing devices and server infrastructure for robust local simulation.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-footer">
-        <span>Aligned with the objectives of MeitY GENESIS to nurture deeptech ventures from Tier-2 and Tier-3 regions.</span>
-        <span>Page 15</span>
-      </div>
-    </article>
-
-
-    <!-- ===================================================================
-         SLIDE 16: NATIONAL IMPACT, VISION & CONCLUSION
-         =================================================================== -->
-    <article class="slide-page" id="slide-16">
-      <div class="slide-header">
-        <div class="header-tag">NATIONAL IMPACT & CONCLUSION</div>
-        <div class="header-meta">SLIDE 16 / 16 · SUMMARY & VISION</div>
-      </div>
-
-      <div class="slide-body slide-16-layout">
-        <div class="vision-banner">
-          <div class="vision-brand-strip">
-            <img src="logo.png" alt="Antromat Logo" class="s16-logo">
+        <div class="why-now-grid">
+          <div class="why-card">
             <div>
-              <span class="vision-tag">MISSION & VALUE ALIGNMENT</span>
-              <h2 class="slide-h2">Empowering Bharat MSMEs with Autonomous Operations</h2>
+              <div class="why-num">THE UNTAPPED REALITY</div>
+              <h3 class="why-title">Operations Happen in Unstructured Channels</h3>
+              <p class="why-desc">
+                A significant share of daily operational activity still happens through messaging apps, spreadsheets, PDFs, and phone calls.
+              </p>
             </div>
           </div>
-          <p class="slide-sub-lead">Antromat is dedicated to eliminating human operational latency, ensuring that no business opportunity is lost to slow manual coordination.</p>
+
+          <div class="why-card">
+            <div>
+              <div class="why-num">THE SOFTWARE GAP</div>
+              <h3 class="why-title">Software Records Data. None Stores Context.</h3>
+              <p class="why-desc">
+                Existing accounting tools record transactions after they occur. Very little software understands live operational context as it happens.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div>
+              <div class="why-num">THE EXPANSION THESIS</div>
+              <h3 class="why-title">Horizontal Infrastructure from Vertical Wedge</h3>
+              <p class="why-desc">
+                Antromat begins with manufacturing workflows in Maharashtra and expands into wholesale, distribution, and corporate operations nationwide.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="impact-pillars-3">
-          <div class="impact-col">
-            <div class="impact-icon">🇮🇳</div>
-            <h3 class="impact-h3">Democratizing Enterprise AI</h3>
-            <p>Bringing enterprise-grade autonomous workflow execution to vernacular-speaking Indian MSMEs without requiring expensive IT staff or software migration.</p>
+        <div class="problem-conclusion-banner" style="border-left-color: var(--accent-amber);">
+          <strong>Long-term Vision:</strong> Business Memory becomes essential horizontal infrastructure for every SME in emerging markets.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Market Opportunity · Horizontal Expansion</span>
+        <span>Antromat · Slide 10</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 11 — WHY ANTROMAT IS DIFFERENT
+         ================================================================= -->
+    <article class="slide-card" id="slide-11" data-slide-index="11">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag green">DIFFERENTIATION</span>
+        <span class="slide-index">SLIDE 11 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Traditional software stores data.<br>
+          <em>Antromat stores context.</em>
+        </h2>
+        <p class="slide-subhead">
+          We don't replace communication. We make communication searchable, connected, and actionable.
+        </p>
+
+        <table class="comparison-table-wrap">
+          <thead>
+            <tr>
+              <th style="width: 25%;">DIMENSION</th>
+              <th style="width: 37%;">TRADITIONAL CRM / ERP</th>
+              <th style="width: 38%;" class="highlight-col">ANTROMAT BUSINESS MEMORY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Data Entry</strong></td>
+              <td>Manual form filling; employees resist updating.</td>
+              <td class="highlight-col">Understands conversations automatically from WhatsApp & audio.</td>
+            </tr>
+            <tr>
+              <td><strong>Customer History</strong></td>
+              <td>Separate, static customer contact cards.</td>
+              <td class="highlight-col">Continuous customer memory across all chats, orders, and calls.</td>
+            </tr>
+            <tr>
+              <td><strong>Operations Sync</strong></td>
+              <td>Siloed tools requiring separate logins and sync.</td>
+              <td class="highlight-col">Connected timeline linking sales, floor production, and billing.</td>
+            </tr>
+            <tr>
+              <td><strong>Information Retrieval</strong></td>
+              <td>Search by rigid database fields and IDs.</td>
+              <td class="highlight-col">Ask natural questions in plain English, Hindi, or Marathi.</td>
+            </tr>
+            <tr>
+              <td><strong>Daily Executive Utility</strong></td>
+              <td>Spam notifications and cluttered dashboards.</td>
+              <td class="highlight-col">One clean AI-generated priority briefing every morning at 08:00 AM.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Competitive Advantage · Context vs Data</span>
+        <span>Antromat · Slide 11</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 12 — BUSINESS MODEL
+         ================================================================= -->
+    <article class="slide-card" id="slide-12" data-slide-index="12">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">BUSINESS MODEL</span>
+        <span class="slide-index">SLIDE 12 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          SaaS for <em>Operational Intelligence</em>
+        </h2>
+        <p class="slide-subhead">
+          Recurring subscription revenue with natural expansion as businesses connect more workflows and plants.
+        </p>
+
+        <div class="pricing-deck-grid">
+          <div class="pricing-deck-card">
+            <div>
+              <span class="price-tier-tag">TIER 1 · STARTER</span>
+              <h3 class="price-tier-title">₹14,999 / mo</h3>
+              <p class="price-tier-desc">
+                For businesses beginning to organize operations. Centralized conversation capture, customer timeline, and 08:00 AM daily briefing.
+              </p>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); padding-top:16px; border-top:1px solid var(--border-subtle);">
+              Target: Single-unit workshops & trading firms
+            </div>
           </div>
 
-          <div class="impact-col">
-            <div class="impact-icon">⚡</div>
-            <h3 class="impact-h3">Unlocking Economic Velocity</h3>
-            <p>Reducing quotation and transaction turnaround from hours to seconds, preventing revenue leakage and accelerating working capital cycles nationwide.</p>
+          <div class="pricing-deck-card highlight">
+            <div>
+              <span class="price-tier-tag">TIER 2 · GROWTH</span>
+              <h3 class="price-tier-title">₹34,999 / mo</h3>
+              <p class="price-tier-desc">
+                The complete AI Chief of Staff. Sales + Operations + Finance workflows combined under unified Business Memory with Tally sync.
+              </p>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--accent-amber); padding-top:16px; border-top:1px solid var(--border-subtle);">
+              Core ICP: Manufacturing SMEs (₹5Cr–₹50Cr)
+            </div>
           </div>
 
-          <div class="impact-col">
-            <div class="impact-icon">📍</div>
-            <h3 class="impact-h3">Tier-2/3 Innovation from Vidarbha</h3>
-            <p>Built from Wardha, Maharashtra, exemplifying grassroots deeptech engineering emerging from regional India to solve indigenous operational challenges.</p>
+          <div class="pricing-deck-card">
+            <div>
+              <span class="price-tier-tag">TIER 3 · ENTERPRISE</span>
+              <h3 class="price-tier-title">Custom / Annual</h3>
+              <p class="price-tier-desc">
+                Custom industry templates, dedicated on-premise / private cloud hosting, multi-plant deployments, and SLA support.
+              </p>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted); padding-top:16px; border-top:1px solid var(--border-subtle);">
+              Target: Large textile mills & distribution chains
+            </div>
           </div>
         </div>
 
-        <div class="conclusion-contact-bar">
-          <div class="c-node">
-            <span class="c-k">APPLICANT / FOUNDER</span>
-            <strong>Soham Gaul</strong>
+        <div class="problem-conclusion-banner" style="margin-top:20px;">
+          <strong>Expansion Levers:</strong> Additional seats/plants, vertical industry fine-tuning templates, and AI query volume tiers.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Business Model · SaaS Recurring Subscriptions</span>
+        <span>Antromat · Slide 12</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 13 — GO TO MARKET
+         ================================================================= -->
+    <article class="slide-card" id="slide-13" data-slide-index="13">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">GO TO MARKET</span>
+        <span class="slide-index">SLIDE 13 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Go To Market: <em>Founder-led before sales-led</em>
+        </h2>
+        <p class="slide-subhead">
+          The first goal is not rapid vanity scale. The first goal is proving deep Business Memory utility inside real manufacturing businesses.
+        </p>
+
+        <div class="phases-grid-row">
+          <div class="phase-card">
+            <span class="phase-num">PHASE 01 · VALIDATION</span>
+            <h3 class="phase-title">Maharashtra Pilots</h3>
+            <p class="phase-text">
+              Direct founder-led pilot deployments with 10–15 manufacturing businesses in Vidarbha, Nagpur, and Pune industrial zones.
+            </p>
           </div>
-          <div class="c-node">
-            <span class="c-k">VENTURE NAME</span>
-            <strong>Antromat</strong>
+
+          <div class="phase-card">
+            <span class="phase-num">PHASE 02 · CLUSTERS</span>
+            <h3 class="phase-title">Textile & Garment Hubs</h3>
+            <p class="phase-text">
+              Expand into concentrated industrial clusters: Ichalkaranji, Bhiwandi, Surat, and Tirupur via industry associations and trade partners.
+            </p>
           </div>
-          <div class="c-node">
-            <span class="c-k">LOCATION</span>
-            <strong>Wardha, Maharashtra, India</strong>
+
+          <div class="phase-card">
+            <span class="phase-num">PHASE 03 · EXPANSION</span>
+            <h3 class="phase-title">Referrals & Partnerships</h3>
+            <p class="phase-text">
+              Word-of-mouth referrals between factory owners, chartered accountants, and ERP channel consultants recommending Antromat.
+            </p>
           </div>
-          <div class="c-node">
-            <span class="c-k">LIVE WEBSITE & DEMO</span>
-            <strong><a href="https://antromat-website.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--yellow); text-decoration:underline;">antromat-website.vercel.app ↗</a></strong>
+        </div>
+
+        <div class="problem-conclusion-banner" style="margin-top:24px;">
+          <strong>Channels:</strong> Factory visits & on-ground audits, LinkedIn executive outreach, incubator networks, and design partner co-creation.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>GTM Strategy · Founder-Led Cluster Expansion</span>
+        <span>Antromat · Slide 13</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 14 — ROADMAP
+         ================================================================= -->
+    <article class="slide-card" id="slide-14" data-slide-index="14">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">EXECUTION ROADMAP</span>
+        <span class="slide-index">SLIDE 14 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Building Business Memory <em>layer by layer</em>
+        </h2>
+        <p class="slide-subhead">
+          A disciplined, progressive rollout delivering compounding customer value at every stage.
+        </p>
+
+        <div class="layers-horizontal-grid" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="layer-step-card">
+            <span class="layer-idx">STAGE 01</span>
+            <h3 class="layer-name" style="font-size:1.15rem;">Memory MVP</h3>
+            <p class="layer-text">WhatsApp & voice note ingest + Morning Briefing digest generation.</p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">STAGE 02</span>
+            <h3 class="layer-name" style="font-size:1.15rem;">Sales Timeline</h3>
+            <p class="layer-text">Quote tracking, client commitments, and re-engagement triggers.</p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">STAGE 03</span>
+            <h3 class="layer-name" style="font-size:1.15rem;">Operations</h3>
+            <p class="layer-text">Factory floor tracker, dispatch alerts, and supplier hold-up logs.</p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">STAGE 04</span>
+            <h3 class="layer-name" style="font-size:1.15rem;">Finance Intel</h3>
+            <p class="layer-text">Tally/Busy integration, payment aging, and automated follow-ups.</p>
+          </div>
+
+          <div class="layer-step-card">
+            <span class="layer-idx">STAGE 05</span>
+            <h3 class="layer-name" style="font-size:1.15rem;">Enterprise</h3>
+            <p class="layer-text">Multi-plant orchestration, ERP connectors, and air-gapped security.</p>
+          </div>
+        </div>
+
+        <div class="problem-conclusion-banner" style="margin-top:28px;">
+          <strong>Ultimate North Star:</strong> Every business founder opens Antromat before opening WhatsApp or email.
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Roadmap · 5 Phased Execution Stages</span>
+        <span>Antromat · Slide 14</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 15 — WHY ME (FOUNDER)
+         ================================================================= -->
+    <article class="slide-card" id="slide-15" data-slide-index="15">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">FOUNDER BACKGROUND</span>
+        <span class="slide-index">SLIDE 15 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          Why Me: <em>Building from customer conversations first</em>
+        </h2>
+        <p class="slide-subhead">
+          Antromat is not built in an ivory tower. It is shaped directly on the ground by how Indian businesses operate.
+        </p>
+
+        <div class="founder-split-grid">
+          <div class="founder-portrait-deck">
+            <img src="founder.jpg" alt="Soham Gaul — Founder of Antromat">
+          </div>
+
+          <div class="founder-bio-wrap">
+            <div>
+              <h3 class="founder-name-title">Soham Gaul</h3>
+              <div class="founder-creds">3RD-YEAR B.TECH · ARTIFICIAL INTELLIGENCE & DATA SCIENCE · WARDHA</div>
+            </div>
+
+            <p class="founder-story-paragraph">
+              Before starting Antromat, I built and validated a LegalTech product by speaking directly with practicing lawyers in Wardha and the Nagpur High Court. 
+            </p>
+
+            <p class="founder-story-paragraph">
+              When customer discovery revealed the market was unwilling to pay, <strong>I shut that idea down instead of forcing it.</strong> That experience fundamentally changed how I build.
+            </p>
+
+            <p class="founder-story-paragraph">
+              Antromat started by talking to factory owners and business operators first — observing how they communicate on WhatsApp, how orders get lost, and where operational knowledge leaks. I am building alongside customer reality, not assumptions.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="slide-footer">
-        <span>ANTROMAT · SUBMISSION FOR MEITY GENESIS 3.0 COHORT SELECTION · 2026</span>
-        <span>Page 16</span>
+      <div class="slide-bottom-bar">
+        <span>Founder Profile · Grounded Customer Discovery</span>
+        <span>Antromat · Slide 15</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 16 — THE ASK
+         ================================================================= -->
+    <article class="slide-card" id="slide-16" data-slide-index="16">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag red">CAPITAL ALLOCATION</span>
+        <span class="slide-index">SLIDE 16 / 17</span>
+      </div>
+
+      <div class="slide-main-content">
+        <h2 class="slide-headline">
+          The Ask: <em>Raising ₹20,00,000</em>
+        </h2>
+        <p class="slide-subhead">
+          Pre-seed capital to deploy Business Memory into production pilots, validate retention, and establish a repeatable founder-led sales motion.
+        </p>
+
+        <table class="ask-allocation-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">ALLOCATION</th>
+              <th style="width: 50%;">PURPOSE</th>
+              <th style="width: 25%;">SHARE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cat-name">AI Infrastructure</td>
+              <td>Claude, OpenAI, Gemini API costs & regional speech inference pipelines.</td>
+              <td>25% (₹5,00,000)</td>
+            </tr>
+            <tr>
+              <td class="cat-name">Product Development</td>
+              <td>Engineering workstations, vector database hosting, and development tooling.</td>
+              <td>20% (₹4,00,000)</td>
+            </tr>
+            <tr>
+              <td class="cat-name">Customer Discovery</td>
+              <td>Travel to Maharashtra manufacturing clusters (Bhiwandi, Pune, Ichalkaranji) for pilots.</td>
+              <td>20% (₹4,00,000)</td>
+            </tr>
+            <tr>
+              <td class="cat-name">Go-To-Market</td>
+              <td>Demos, pilot onboarding collateral, and initial customer acquisition.</td>
+              <td>15% (₹3,00,000)</td>
+            </tr>
+            <tr>
+              <td class="cat-name">Hiring Support</td>
+              <td>First junior engineering & UI/UX design support to accelerate delivery.</td>
+              <td>10% (₹2,00,000)</td>
+            </tr>
+            <tr>
+              <td class="cat-name">Legal & Compliance</td>
+              <td>Private limited company incorporation, CA retainers, IP filings, agreements.</td>
+              <td>10% (₹2,00,000)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="ask-milestones-box">
+          <div class="ask-milestones-title">MILESTONES UNLOCKED BY THIS ROUND</div>
+          <div class="milestones-chips-row">
+            <div class="milestone-chip">Business Memory MVP deployed</div>
+            <div class="milestone-chip">First 10–15 paying pilots onboarded</div>
+            <div class="milestone-chip">Real factory workflows running daily</div>
+            <div class="milestone-chip">Repeatable sales motion established</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Investment Ask · Pre-Seed Round</span>
+        <span>Antromat · Slide 16</span>
+      </div>
+    </article>
+
+
+    <!-- =================================================================
+         SLIDE 17 — CLOSING VISION
+         ================================================================= -->
+    <article class="slide-card" id="slide-17" data-slide-index="17">
+      <div class="slide-top-bar">
+        <span class="slide-category-tag">SUMMARY & CLOSING</span>
+        <span class="slide-index">SLIDE 17 / 17</span>
+      </div>
+
+      <div class="slide-main-content slide-cover-wrap" style="text-align: left;">
+        <div style="font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; color:var(--accent-amber); margin-bottom:16px; text-transform:uppercase;">
+          THE MEMORY LAYER FOR BUSINESS
+        </div>
+        <h2 class="slide-headline" style="font-size:clamp(2.5rem, 4.5vw, 4rem); margin-bottom:24px;">
+          Every business generates knowledge.<br>
+          <em>Antromat remembers it.</em>
+        </h2>
+        <p class="slide-subhead" style="font-size:1.35rem; color:var(--text-secondary); max-width:760px;">
+          We are building the AI Chief of Staff that keeps Indian businesses organized, accountable, and moving forward with quiet confidence.
+        </p>
+
+        <div class="cover-meta-grid" style="margin-top: 40px;">
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">FOUNDER</span>
+            <span class="cover-meta-val">Soham Gaul</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">EMAIL DIRECT</span>
+            <span class="cover-meta-val"><a href="mailto:sohamgaul@gmail.com" style="color:var(--text-primary); text-decoration:none;">sohamgaul@gmail.com</a></span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">LOCATION</span>
+            <span class="cover-meta-val">Wardha, Maharashtra, India</span>
+          </div>
+          <div class="cover-meta-item">
+            <span class="cover-meta-label">NEXT STEP</span>
+            <span class="cover-meta-val"><a href="index.html" style="color:var(--accent-amber); text-decoration:none;">Explore Live Website ↗</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-bar">
+        <span>Antromat Enterprise Systems · All Rights Reserved</span>
+        <span>Slide 17 / 17 · The AI Chief of Staff</span>
       </div>
     </article>
 
   </main>
 
-  <script src="js/pitch.js"></script>
+  <!-- ===================================================================
+       LIGHTWEIGHT PRESENTATION NAVIGATION ENGINE
+       =================================================================== -->
+  <script>
+    (function() {
+      const slides = Array.from(document.querySelectorAll('.slide-card'));
+      const select = document.getElementById('deck-slide-select');
+      const counter = document.getElementById('deck-counter');
+      const prevBtn = document.getElementById('deck-prev-btn');
+      const nextBtn = document.getElementById('deck-next-btn');
+      const printBtn = document.getElementById('deck-print-btn');
+
+      let currentSlideIdx = 0;
+
+      function getSlideIndexFromId(id) {
+        return slides.findIndex(s => s.id === id);
+      }
+
+      function scrollToSlide(idx) {
+        if (idx < 0) idx = 0;
+        if (idx >= slides.length) idx = slides.length - 1;
+        currentSlideIdx = idx;
+        const target = slides[idx];
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          updateUI(idx);
+        }
+      }
+
+      function updateUI(idx) {
+        currentSlideIdx = idx;
+        const formatted = String(idx + 1).padStart(2, '0');
+        const total = String(slides.length).padStart(2, '0');
+        if (counter) {
+          counter.innerHTML = `SLIDE <strong>${formatted}</strong> / ${total}`;
+        }
+        if (select && slides[idx]) {
+          select.value = slides[idx].id;
+        }
+      }
+
+      if (select) {
+        select.addEventListener('change', (e) => {
+          const idx = getSlideIndexFromId(e.target.value);
+          if (idx !== -1) scrollToSlide(idx);
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          scrollToSlide(currentSlideIdx - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          scrollToSlide(currentSlideIdx + 1);
+        });
+      }
+
+      if (printBtn) {
+        printBtn.addEventListener('click', () => {
+          window.print();
+        });
+      }
+
+      // Keyboard arrow navigation
+      window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'j') {
+          e.preventDefault();
+          scrollToSlide(currentSlideIdx + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'k') {
+          e.preventDefault();
+          scrollToSlide(currentSlideIdx - 1);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          scrollToSlide(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          scrollToSlide(slides.length - 1);
+        }
+      });
+
+      // Intersection Observer to track visible slide on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = getSlideIndexFromId(entry.target.id);
+            if (idx !== -1) {
+              updateUI(idx);
+            }
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      slides.forEach(slide => observer.observe(slide));
+    })();
+  </script>
 </body>
 </html>

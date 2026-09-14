@@ -1,6 +1,6 @@
 /**
- * ANTROMAT — ISSUE 01: THE AI CHIEF OF STAFF
- * Editorial Engine & Micro-Interactions
+ * ANTROMAT — THE AI CHIEF OF STAFF
+ * Interactive Experience Engine
  * Specification: website new version.md
  */
 
@@ -348,7 +348,7 @@ function initModalEngine() {
         submitBtn.style.color = '#FAFAF7';
       }
       setTimeout(() => {
-        alert('Thank you. Issue 01 Private Briefing invitation has been dispatched to your email.');
+        alert('Thank you. Your private briefing reservation has been received. Our team will contact you shortly.');
         closeModal();
         demoForm.reset();
         if (submitBtn) {
