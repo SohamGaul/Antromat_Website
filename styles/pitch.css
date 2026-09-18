@@ -1009,53 +1009,168 @@ body {
 }
 
 /* ==========================================================================
-   PRINT / PDF STYLES
+   PRINT / PDF EXPORT STYLES (High Fidelity Presentation Deck)
    ========================================================================== */
+@page {
+  size: landscape;
+  margin: 0;
+}
+
 @media print {
-  body {
-    background: #FFF !important;
-    color: #000 !important;
-    padding: 0 !important;
+  /* Enforce exact background colors, graphics, and borders in PDF/Print */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 
+  html, body {
+    background: var(--bg-page, #0A0A0A) !important;
+    color: var(--text-primary, #F5F5F0) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Hide screen-only interactive controls */
   .deck-top-nav {
     display: none !important;
   }
 
   .deck-container {
-    max-width: 100% !important;
+    max-width: none !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
     gap: 0 !important;
+    display: block !important;
   }
 
+  /* Each slide card behaves as a distinct landscape slide page */
   .slide-card {
-    page-break-after: always;
-    break-after: page;
-    background: #FFF !important;
-    color: #000 !important;
-    border: none !important;
-    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    width: 100vw !important;
+    height: 100vh !important;
     min-height: 100vh !important;
-    padding: 30px !important;
+    max-height: 100vh !important;
+    box-sizing: border-box !important;
+    padding: 36px 48px !important;
+    margin: 0 !important;
+    background: var(--bg-slide, #121212) !important;
+    color: var(--text-primary, #F5F5F0) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
   }
 
-  .slide-headline, .flow-title, .why-title, .founder-name-title {
-    color: #000 !important;
+  .slide-card:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
   }
 
-  .slide-subhead, .why-desc, .problem-list, .flow-items-list {
-    color: #333 !important;
+  /* Preserve all card surfaces, tags, badges, and accents */
+  .problem-col, 
+  .why-card, 
+  .flow-col, 
+  .query-specimen-card, 
+  .pricing-deck-card, 
+  .phase-card, 
+  .ask-milestones-box,
+  .layer-step-card,
+  .workflow-deck-card,
+  .icp-profile-card {
+    background: var(--bg-surface, #181818) !important;
+    border: 1px solid var(--border-subtle, #242424) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  .problem-col, .why-card, .flow-col, .query-specimen-card, .pricing-deck-card, .phase-card, .ask-milestones-box {
-    background: #F8F8F8 !important;
-    border: 1px solid #DDD !important;
+  .pricing-deck-card.highlight {
+    background: #191919 !important;
+    border-color: var(--accent-amber) !important;
   }
 
-  .slide-top-bar, .slide-bottom-bar {
-    border-color: #EEE !important;
-    color: #666 !important;
+  .flow-col.center-core {
+    background: #171612 !important;
+    border-color: rgba(211, 139, 50, 0.4) !important;
+  }
+
+  .problem-conclusion-banner {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ensure headings, subtitles, and text maintain contrast */
+  .slide-headline {
+    color: var(--text-primary, #F5F5F0) !important;
+  }
+
+  .slide-headline em {
+    color: var(--accent-amber, #D38B32) !important;
+  }
+
+  .slide-subhead {
+    color: var(--text-secondary, #C8C8C0) !important;
+  }
+
+  .slide-top-bar, 
+  .slide-bottom-bar {
+    border-color: var(--border-subtle, #242424) !important;
+    color: var(--text-muted, #6E6E68) !important;
+  }
+
+  /* Tables */
+  .ask-allocation-table th,
+  .ask-allocation-table td,
+  .comparison-table-wrap th,
+  .comparison-table-wrap td {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .comparison-table-wrap th.highlight-col,
+  .comparison-table-wrap td.highlight-col {
+    background: rgba(211, 139, 50, 0.08) !important;
+    border-left: 1px solid rgba(211, 139, 50, 0.3) !important;
+    border-right: 1px solid rgba(211, 139, 50, 0.3) !important;
+  }
+
+  /* Images and graphic specimens */
+  img {
+    max-width: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .product-media-frame img {
+    height: 310px !important;
+    object-fit: cover !important;
+  }
+
+  .founder-portrait-deck img {
+    height: 280px !important;
+    object-fit: cover !important;
+  }
+
+  .icp-img-box {
+    height: 140px !important;
+  }
+
+  .icp-caption-overlay {
+    background: rgba(10, 10, 10, 0.9) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 
